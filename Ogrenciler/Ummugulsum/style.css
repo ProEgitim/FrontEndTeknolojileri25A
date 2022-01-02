@@ -17,7 +17,7 @@ table{
     height: 500px;
     border: 7px solid rgb(250, 134, 2); /* top,right,bottom,left */
 }
-td{
+td,th{
     border: 3px solid yellow;
 }
 #govde{
