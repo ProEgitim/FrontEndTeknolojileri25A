@@ -42,6 +42,8 @@
             flex-direction: row;
             flex-wrap: wrap;
             /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
         }
 
         .container div {
@@ -51,17 +53,34 @@
             margin: 10px; /* sol - 10px, sağ - 10px */
             padding: 5px;
         }
+
+        /* ToDo Bağlaç .container div deki bağlaç kullanılacak */
+        .container span {
+            border: 1px solid #000;
+            width: calc(33.33% - 2px - 40px - 10px);
+            height: 200px;
+            margin: 20px;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
     <div id="main">
         <div class="container">
+            <!-- Sadece 1 Kutuyu Ele almamız istenecek -->
             <div> 1. Kutu </div>
             <div> 2. Kutu </div>
             <div> 3. Kutu </div>
             <div> 4. Kutu </div>
+            <!-- <span> 5. Kutu </span> -->
             <div> 5. Kutu </div>
             <div> 6. Kutu </div>
+            <div> 7. Kutu </div>
+            <div> 8. Kutu </div>
+            <div> 9. Kutu </div>
+            <div> 10. Kutu </div>
+            <div> 11. Kutu </div>
+            <div> 12. Kutu </div>
         </div>
     </div>
 </body>
