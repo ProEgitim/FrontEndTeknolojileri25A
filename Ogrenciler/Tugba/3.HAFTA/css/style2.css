@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+}
+header {
+    height: 125px;
+}
+.wrapper {
+    border: 1px solid #000;
+}
+.leftMenu {
+    display: flex;
+    width: 250px;
+    height: 300px;
+}
+.rightMain {
+    width: 750px;
+    height: 375px;
+}
+footer {
+    height: 75px;
+}
+footer {
+    text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 50px;
+    }
+    .leftMenu {
+        width: 100px;
+        height: 150px;
+    }
+    .rightMain {
+        width: 375px;
+        height: 150px;
+    }
+    footer {
+        height: 50px;
+    }
+}
