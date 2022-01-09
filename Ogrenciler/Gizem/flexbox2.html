@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Örnekleri</title>
+    <style>
+        #main {
+            margin: auto;
+             width: 1200px; 
+            width: 80%;
+            padding: 5px;
+            border: 1px solid red;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+        .kategori {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+        .kategori div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            margin: auto;
+        }
+        .ortakisim {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+           width: auto;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+         .yanmenu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            margin: 10px;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+        .image {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            margin: 10px;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+        .image img{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 10px;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+         .lorem{
+             margin: 10px;
+            flex-wrap: row wrap;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+        .giris {
+            width: calc(33.33% - 2px - 20px - 10px);
+            height: 20px;
+            border: 1px solid #000;
+            /*margin-right: 10%;*/
+            /* sol - 10px, sağ - 10px */
+            padding: 5px;
+        }
+        .kayit {
+            width: calc(33.33% - 2px - 20px - 10px);
+            height: 20px;
+            border: 1px solid #000;
+            margin-left: 35%;
+            /* sol - 10px, sağ - 10px */
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="container">
+            <!-- Sadece 1 Kutuyu Ele almamız istenecek -->
+            <div class="giris"> Giriş Yap </div>
+            <div class="kayit"> Kayıt ol </div>
+        </div>
+        <div class="kategori" >
+            <div>Ana Sayfa</div>
+            <div>Ürünler</div>
+            <div>Biz Kimiz</div>
+            <div>İletişim</div>
+        </div>
+        <div class="ortakisim">
+            <div class="yanmenu">
+              <ul>
+                <li>emlak</li>
+                <li>vasıta</li>
+                <li>yedek parca</li>
+                <li>özelders</li>
+                <li>iş ilanları</li>
+              </ul>
+            </div>
+            <div class="image">
+                <img src="1.jpg" width="100px" height="100px" />
+                <img src="manzara_resimleri2.jpg" width="100px" height="100px" />
+                <img src="manzara-resimleri-23-630x325.jpg" width="100px" height="100px" />
+                <img src="rick_and_morty_attacking_4k_hd-t2.jpg" width="100px" height="100px" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
