@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>esma_flex</title>
+    <style>
+        body {
+            margin: auto;
+            width: 90%;
+            font-size: 10px;
+            /* body'ye width'de % veya px verince ve 
+            margin auto verince ortalıyor.
+            
+            Ekranı küçülttükçe içerik neden sağda ve solda 90%'ın dışında kalıyor.*/
+
+        }
+
+        .container {
+            margin: auto;
+            width: 90%;
+            /* container'a width'de % veya px verince ve 
+            margin auto verince ortalamıyor sağda boşluk bırakıyor, neden?*/
+
+
+        }
+
+        .header {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+
+            align-items: baseline;
+        }
+
+        .logo {
+            border: 1px solid #000;
+            width: 20%;
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .bosluk {
+            width: 60%;
+            border: 1px solid black;
+
+        }
+
+        .kayit {
+            border: 1px solid #000;
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            /*Kayıt ol ve girişi tek div yaptım logoyu da ayrıca bir tek div yapıp header div'inin içine yerleştirdim. 
+            Fakat space between yapınca Kayıt div i ortada kaldı. 
+            Sayfanın sağına itmek için header'a flex-end yaptım bu sefer logoyu da aldı. 
+            Sadece kayıt div'ine flex end yaptım işlemedi. 
+            Sonuca ulasabilmek için araya "bosluk" div'i koydum.*/
+        }
+
+        .kategori {
+            border: 1px solid #000;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            column-gap: 15px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .govde {
+            
+            border: 1px solid #000;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            column-gap: 0px;
+
+
+        }
+
+        .yanmenu {
+            
+            /*neden yanmenu ve govdesag arasında ve kenarlarında boşluk kalıyor?
+            Bu sorunu width vererek çözdüm. Width vermeden nasıl çözebiliriz*/
+            display: flex;
+            border: 1px solid #000;
+            width: 400px;
+
+        }
+
+        .govdesag {
+            
+            /*neden yanmenu ve govdesag arasında ve kenarlarında boşluk kalıyor*/
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+
+
+
+        }
+
+        .govdeimaj {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .footer {
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .footer li {
+            border: 1px solid #000;
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <div class="header">
+            <div class="logo">
+                <img src="https://st.depositphotos.com/1361307/2976/i/600/depositphotos_29762121-stock-photo-oat-cereal-grain.jpg"
+                    alt="oat" height="50px">
+            </div>
+            <div class="bosluk"></div>
+
+            <div class="kayit">
+                <a href="">Kayıt Ol</a>
+                <a href="">Giriş</a>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="kategori">
+            <a href="">Ana Sayfa</a>
+            <a href="">Ürünler</a>
+            <a href="">Biz Kimiz</a>
+            <a href="">İletişim</a>
+        </div>
+
+        <br>
+
+
+
+
+        <div class="govde">
+
+
+            <div class="yanmenu">
+
+                <li>
+                    <ul>emlak</ul>
+                    <ul>Vasıta</ul>
+                    <ul>Yedek Parça</ul>
+                    <ul>Özel Ders</ul>
+                    <ul>İş İlanarı</ul>
+                </li>
+
+            </div>
+
+            <div class="govdesag">
+                <div class="govdeimaj">
+                    <img src="https://previews.123rf.com/images/mariuszszczygiel/mariuszszczygiel1209/mariuszszczygiel120900248/16050265-grains-of-wheat.jpg"
+                        alt="wheat" width="100px" height="100px">
+                    <img src="https://media.istockphoto.com/photos/wooden-spoon-filled-with-buckwheat-grain-picture-id114332953?k=20&m=114332953&s=612x612&w=0&h=CTCWvwMG2AIr3mFO8LomY2yuXRdvq2Bg2guYIhr0zbc="
+                        alt="buckwheat" width="100px" height="100px">
+                    <img src="https://previews.123rf.com/images/yelenayemchuk/yelenayemchuk1401/yelenayemchuk140100054/25014528-green-buckwheat.jpg"
+                        alt="buckwheat2" width="100px" height="100px">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Japanese_Buckwheat_Flower.JPG"
+                        alt="buckwheatflower" width="100px" height="100px">
+
+
+                </div>
+
+                <div class="paragraf_govde">
+                    <p>
+                        Lorem Ipsum Nedir?
+                        Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı
+                        bilinmeyen
+                        bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak
+                        karıştırdığı
+                        1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca
+                        varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.
+                        1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın
+                        zamanda
+                        Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler
+                        olmuştur.
+
+                    </p>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="footer">
+            <li>
+                <ul style="padding-inline-start: 0px;">Facebook</ul>
+                <!-- User agent'da padding-inline-start=40px göründüğü için sıfırladım-->
+                <ul>Twitter</ul>
+                <ul>Instagram</ul>
+                <ul>Youtube</ul>
+            </li>
+        </div>
+
+    </div>
+
+</body>
