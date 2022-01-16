@@ -27,11 +27,15 @@
     .item6 {
         grid-area: footer;
     }
+    .item7 {
+        grid-area: kategori;
+    }
 
     .grid-container {
         display: grid;
         grid-template-areas:
             'header header header header header header'
+            'kategori kategori kategori kategori kategori kategori'
             'menu main main main main main'
             'menu main2 main2 main2 main2 main2'
             'menu main3 main3 main3 main3 main3'
@@ -53,6 +57,7 @@
 <body>
     <div class="grid-container">
         <div class="item1">Header</div>
+        <div class="item7">Kategori</div>
         <div class="item2">Yan Menu</div>
         <div class="item3">yan menu alan1 </div>
         <div class="item4">yan menu alan2 </div>
