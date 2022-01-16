@@ -5,102 +5,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Örnekleri</title>
+    <title>Flexbox2 Örnekleri</title>
     <style>
         #main {
             margin: auto;
-             width: 1200px; 
+            width: 1200px; 
             width: 80%;
-            padding: 5px;
+            padding: 10px;
             border: 1px solid red;
+            font-size: 10px;
         }
-
         .container {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             border: 1px solid black;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
+            padding: 5px;
+            justify-content: space-between;
         }
         .kategori {
-            display: flex;
+            border: 1px solid black;
+            display: flex ;
             flex-direction: row;
             flex-wrap: wrap;
-            border: 1px solid black;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
-        }
-        .kategori div{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            border: 1px solid black;
             margin: auto;
+            justify-content: space-between;
+            justify-content: space-around;
         }
         .ortakisim {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             border: 1px solid black;
-           width: auto;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
+            width: auto;
         }
-         .yanmenu {
+        .yanmenu {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             border: 1px solid black;
             margin: 10px;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
+            width: 20%;
         }
-        .image {
+        .altyanmenu {
+            list-style-type: none;
+        }
+        .image{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             border: 1px solid black;
-            margin: 10px;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
+            padding: 10px;
+            margin: 10pX;
+            width: 70%;
         }
         .image img{
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            border: 1px solid black;
+            padding: 10px;
+            margin: auto;
+            width: 20;
+        }
+        .lorem{
             margin: 10px;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
-        }
-         .lorem{
-             margin: 10px;
             flex-wrap: row wrap;
-            /* flex-flow: row wrap; */
-            /* ToDo: gap ve margin boşlukları incelenecek. */
-            /* gap: 10px; */
+            border: 1px solid black;
         }
-        .giris {
-            width: calc(33.33% - 2px - 20px - 10px);
-            height: 20px;
-            border: 1px solid #000;
-            /*margin-right: 10%;*/
-            /* sol - 10px, sağ - 10px */
-            padding: 5px;
-        }
-        .kayit {
-            width: calc(33.33% - 2px - 20px - 10px);
-            height: 20px;
-            border: 1px solid #000;
-            margin-left: 35%;
-            /* sol - 10px, sağ - 10px */
-            padding: 5px;
+        .footer{
+            border : 1px solid black;
+            display: flex ;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+            justify-content: space-between;
+            justify-content: space-around;
         }
     </style>
 </head>
@@ -109,8 +89,8 @@
     <div id="main">
         <div class="container">
             <!-- Sadece 1 Kutuyu Ele almamız istenecek -->
-            <div class="giris"> Giriş Yap </div>
-            <div class="kayit"> Kayıt ol </div>
+            <div class="container"> Giriş Yap </div>
+            <div class="container"> Kayıt ol </div>
         </div>
         <div class="kategori" >
             <div>Ana Sayfa</div>
@@ -120,7 +100,7 @@
         </div>
         <div class="ortakisim">
             <div class="yanmenu">
-              <ul>
+              <ul class="altyanmenu">
                 <li>emlak</li>
                 <li>vasıta</li>
                 <li>yedek parca</li>
@@ -129,13 +109,25 @@
               </ul>
             </div>
             <div class="image">
-                <img src="1.jpg" width="100px" height="100px" />
-                <img src="manzara_resimleri2.jpg" width="100px" height="100px" />
-                <img src="manzara-resimleri-23-630x325.jpg" width="100px" height="100px" />
-                <img src="rick_and_morty_attacking_4k_hd-t2.jpg" width="100px" height="100px" />
+                    <img src="1.jpg" width="100px" height="100px" />
+                    <img src="manzara_resimleri2.jpg" width="100px" height="100px" />
+                    <img src="manzara-resimleri-23-630x325.jpg" width="100px" height="100px" />
+                    <img src="rick_and_morty_attacking_4k_hd-t2.jpg" width="100px" height="100px" />
+                <div class="lorem">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
             </div>
+        </div>
+        <div class="footer">
+            <div>Facebook</div>
+            <div>Instagram</div>
+            <div>Twitter</div>
+            <div>Youtube</div>
         </div>
     </div>
 </body>
-
 </html>
