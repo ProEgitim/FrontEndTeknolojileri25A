@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop-1</title>
+
+    <style>
+        body {
+            /* margin: auto; bunu bize container sağlıyor */
+            /* width: 90%; body içerisinde width kullanmak tarayıcının genel genişliğini ifade eder. Yani 90% dersek ben tarayıcımın bu kadarlık kısmını kullanırım. */
+            
+            /* genel özellik kullanımına örnektir */
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 10px;
+        }
+
+        .container {
+            /* boşluklarımız container daki genişlik çıktıktan sonra sağdan ve soldan verilecek olan boşluklardır.
+            width: 1200px için tarayıcıda kalan ekran boyutuna göre kalan kısımları ifade edecektir.
+            Bunu % olarak ifade edersek tüm sayfa genişlikleri için % değerinden sonra kalan boşluklar bizim için referans olacaktır. */
+            margin: auto;
+            /* px ile çalışıyoruz */
+            width: 1200px;
+            /* % ile çalışıyoruz */
+            /* width: 80%; */
+        }
+
+        .header {
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row; /* olmalı : satırda mı sütunda mı çalışıyoruz bilmeliyiz. Varsayılan column yani sütundur. */
+            /* space-between kullandığımda 1. elemandan sonraki gelecek olan eleman kalan boşluğun ortasına konumlanacaktır. (Toplamda 2 sütun seçildi.) 
+            Satırda bulunan 2. sütunu sağ kısma itelemek istiyorsak bunun için bize bir tane daha div gerekli
+            */
+            justify-content: space-between;
+            padding: 10px;
+            /* logoya bağlı bir yükseklik yerine header elemanına genel bir yükseklik vermek daha doğru olacaktır. */
+            height: 75px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; /* div elemanını ortalar */
+            width: 20%; /* sayfa tasarımında belirli bir ölçütleme yoksa kayit div i ile genişliği eşit tutmak için kullanıldı */
+        }
+
+        /* Kayıt ol ve Giriş yap için aslında yeni bir container oluşturduk ve içerisinde bulunacak eleman veya elemanları konumlandırdık.
+        Kalan kısmın tamamı üzerinde çalışacak isek logodan arta kalan genişliği de bu container a verdik. */
+        .sag {
+            display: flex;
+            justify-content: flex-end;
+            width: 80%;
+        }
+
+        .kayit {
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* bulunduğumuz div elemanlarını ortalar */
+            font-weight: bold; /* sadece bu elemanımızın metinleri kalın olsun */
+        }
+
+        .kategori {
+            border: 1px solid #000;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            column-gap: 15px; /* doğru kullanım */
+            padding: 10px; /* eklenebilir */
+        }
+
+        /* tüm a elemanları için geçerli olacaktır. Farklı alanlarda farklı özellikler belirtmek daha doğru değil mi? */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .govde {
+            border: 1px solid #000;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            /* gerekli miydi ? (varsayılan gap 0) */
+            /* column-gap: 0px; */
+            min-height: 400px; /* sayfa sıkışmasın isteniyorsa eklenebilir */
+        }
+
+        .yanmenu {
+            display: flex;
+            /* width: 400px; */
+            /* genişlik tanımlamazsak elemanın içinde bulunan en uzun kelimeye göre sıkıştıracak ve ayırdığımız elemanların genişliklerini bilemeyeceğiz. */
+            min-width: 200px;
+        }
+
+        .govdesag {
+            display: flex;
+            flex-direction: column; /* varsayılan ama kullanılabilir. */
+            row-gap: 10px; /* resimler ile içeriğin arasındaki boşluk için kullanabiliriz. */
+            /* width: 800px; */
+            padding: 0 10px;
+        }
+
+        .govdeimaj {
+            display: flex;
+            justify-content: space-around;
+            /* gövde ile aynı hizada başlamasın */
+            padding-top: 10px;
+        }
+
+        /* içerik için düzenleme */
+        .paragraf_govde {
+            text-align: justify;
+        }
+
+        /* her bir resmi bulunan elemanın içerisinde manipule edebiliriz */
+        .govdeimaj img {
+            width: 25%;
+            padding: 0 10px;
+            /* yükseklikleri eşitleyelim */
+            height: 90px;
+        }
+
+        .govdeimaj img:first-child {
+            padding-left: 0;
+        }
+
+        .govdeimaj img:last-child {
+            padding-right: 0;
+        }
+
+        .footer {
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .footer ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            column-gap: 15px;
+            padding: 0;
+        }
+
+        /* neden listeyi .footer elemanı ile bağladım ? direkt olarak ul li yazamaz mıydım ? */
+        .footer ul li {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://st.depositphotos.com/1361307/2976/i/600/depositphotos_29762121-stock-photo-oat-cereal-grain.jpg"
+                    alt="oat" height="50px">
+            </div>
+            <div class="sag">
+                <div class="kayit">
+                    <a href="">Kayıt Ol</a>
+                    <a href="">Giriş</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="kategori">
+            <a href="">Ana Sayfa</a>
+            <a href="">Ürünler</a>
+            <a href="">Biz Kimiz</a>
+            <a href="">İletişim</a>
+        </div>
+        <br>
+        <div class="govde">
+            <div class="yanmenu">
+                <ul>
+                    <li>emlak</li>
+                    <li>Vasıta</li>
+                    <li>Yedek Parça</li>
+                    <li>Özel Ders</li>
+                    <li>İş İlanarı</li>
+                </ul>
+            </div>
+            <div class="govdesag">
+                <div class="govdeimaj">
+                    <img src="https://previews.123rf.com/images/mariuszszczygiel/mariuszszczygiel1209/mariuszszczygiel120900248/16050265-grains-of-wheat.jpg"
+                        alt="wheat" width="100px" height="100px">
+                    <img src="https://media.istockphoto.com/photos/wooden-spoon-filled-with-buckwheat-grain-picture-id114332953?k=20&m=114332953&s=612x612&w=0&h=CTCWvwMG2AIr3mFO8LomY2yuXRdvq2Bg2guYIhr0zbc="
+                        alt="buckwheat" width="100px" height="100px">
+                    <img src="https://previews.123rf.com/images/yelenayemchuk/yelenayemchuk1401/yelenayemchuk140100054/25014528-green-buckwheat.jpg"
+                        alt="buckwheat2" width="100px" height="100px">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Japanese_Buckwheat_Flower.JPG"
+                        alt="buckwheatflower" width="100px" height="100px">
+                </div>
+
+                <div class="paragraf_govde">
+                    <p>
+                        Lorem Ipsum Nedir?
+                        Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı
+                        bilinmeyen
+                        bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak
+                        karıştırdığı
+                        1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca
+                        varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.
+                        1960'larda Lorem Ipsum pasajları da içeren Letraset yapraklarının yayınlanması ile ve yakın
+                        zamanda
+                        Aldus PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık yazılımları ile popüler
+                        olmuştur.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="footer">
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

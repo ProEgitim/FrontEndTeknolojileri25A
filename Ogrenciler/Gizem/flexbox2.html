@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox2 Örnekleri</title>
+    <style>
+        #main {
+            margin: auto;
+            width: 1200px;
+            /* width: 80%; */
+            padding: 10px;
+            border: 1px solid red;
+            font-size: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            padding: 5px;
+            justify-content: space-between;
+        }
+        .kategori {
+            border: 1px solid black;
+            display: flex ;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            /* margin: auto; */
+            justify-content: space-between;
+            justify-content: space-around;
+        }
+        .ortakisim {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            width: 100%;
+        }
+        .yanmenu {
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            margin: 10px;
+            width: 20%;
+        }
+        .altyanmenu {
+            list-style-type: none;
+        }
+        .govde{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        .resimler{
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            /* padding: 10px; */
+            margin: 10px;
+            justify-content: space-between;
+            /* width: 80%; */
+        }
+
+        .resimler img {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border: 1px solid black;
+            padding: 10px;
+            /* margin: auto; */
+            width: 100px;
+            height: 100px;
+        }
+
+        .resimler img:first-child {
+            margin-left: 0;
+        }
+
+        .resimler img:last-child {
+            margin-right: 0;
+        }
+
+        /* .resimler img:nth-child(2n) {
+            width: 20%;
+        }
+
+        .resimler img:nth-child(2n-1) {
+            width: 80%;
+        } */
+
+        .lorem{
+            margin: 10px;
+            display: flex;
+            flex-wrap: row wrap;
+            border: 1px solid black;
+        }
+        .footer{
+            border : 1px solid black;
+            display: flex ;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+            justify-content: space-between;
+            justify-content: space-around;
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            padding: 5px;
+            justify-content: space-between;            
+        }
+        .logo {
+            width: 20%;
+        }
+        .sagkisim {
+            display: flex;
+            flex-direction: row;
+        }
+        .sagkisim span {
+            border: 1px solid #000;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <!-- Sadece 1 Kutuyu Ele almamız istenecek -->
+            <div class="logo"> Logo </div>
+            <div class="sagkisim">
+                <span> Giriş Yap </span>
+                <span> Kayıt ol </span>
+            </div>
+        </div>
+        <div class="kategori" >
+            <div>Ana Sayfa</div>
+            <div>Ürünler</div>
+            <div>Biz Kimiz</div>
+            <div>İletişim</div>
+        </div>
+        <div class="ortakisim">
+            <div class="yanmenu">
+              <ul class="altyanmenu">
+                <li>emlak</li>
+                <li>vasıta</li>
+                <li>yedek parca</li>
+                <li>özelders</li>
+                <li>iş ilanları</li>
+              </ul>
+            </div>
+            <div class="govde">
+                <div class="resimler">
+                    <img src="1.jpg" />
+                    <img src="manzara_resimleri2.jpg" />
+                    <img src="manzara-resimleri-23-630x325.jpg" />
+                    <img src="rick_and_morty_attacking_4k_hd-t2.jpg" />
+                </div>
+                <div class="lorem">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>Facebook</div>
+            <div>Instagram</div>
+            <div>Twitter</div>
+            <div>Youtube</div>
+        </div>
+    </div>
+</body>
+</html>
