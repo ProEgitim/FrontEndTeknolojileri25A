@@ -1,0 +1,101 @@
+
+#main {
+    margin: auto;
+     width: 1200px; 
+   
+    border: 1px solid red;
+    
+}
+
+
+
+.container {
+  
+   width: calc(1200px);
+   
+  /* display:flex;
+    border: 1px solid black;
+    /* flex-flow: row wrap; */
+    /* ToDo: gap ve margin boşlukları incelenecek. */
+    /* gap: 10px; */
+}
+
+
+.header{
+height: 125px;
+border: 1px solid red;
+display: flex;
+justify-content:space-between;
+   
+}
+
+.logo{
+    width: 25%;
+}
+.hrbar{
+    width: 20%;
+display: flex;
+justify-content:space-between;
+
+}
+.category{
+    height: 50px;
+    border: 1px solid red;
+    background-color: cadetblue;
+}
+.category ul{
+    display: flex;
+    justify-content:space-between;
+   
+    
+}
+
+
+.middle{
+ display: flex;
+ 
+}
+ .sidebar{
+ height: 500px;
+ width: 25%;
+ 
+ border: 1px solid red;
+}
+.sidebar li{
+    list-style-type: none;
+    padding: 5px;
+}
+.category li{
+    display: inline;
+    list-style-type: none;
+    width: 100%;
+    align-content:stretch;
+}
+ .rightsb{
+    height: 500px;
+    width: 100%;
+    border: 1px solid red;
+    
+ }
+ .rsbimage{
+    border: 1px solid red;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+    margin:5px;
+ }
+ .rsbimage div{
+    padding:15px;
+    border: 1px solid black;
+    justify-content:space-between;
+ }
+.footer{
+    height: 50px;
+    border: 1px solid red;
+    display: flex;
+    justify-content:space-around;
+    
+}
+.footer a{
+    
+}
