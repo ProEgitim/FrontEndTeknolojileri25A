@@ -9,8 +9,8 @@
     <style>
         #main {
             margin: auto;
-            width: 1200px; 
-            width: 80%;
+            width: 1200px;
+            /* width: 80%; */
             padding: 10px;
             border: 1px solid red;
             font-size: 10px;
@@ -18,7 +18,7 @@
         .container {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             border: 1px solid black;
             padding: 5px;
             justify-content: space-between;
@@ -27,22 +27,21 @@
             border: 1px solid black;
             display: flex ;
             flex-direction: row;
-            flex-wrap: wrap;
-            margin: auto;
+            /* flex-wrap: wrap; */
+            /* margin: auto; */
             justify-content: space-between;
             justify-content: space-around;
         }
         .ortakisim {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
             border: 1px solid black;
-            width: auto;
+            width: 100%;
         }
         .yanmenu {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             border: 1px solid black;
             margin: 10px;
             width: 20%;
@@ -50,26 +49,55 @@
         .altyanmenu {
             list-style-type: none;
         }
-        .image{
+        .govde{
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-direction: column;
             border: 1px solid black;
             padding: 10px;
-            margin: 10pX;
-            width: 70%;
+            margin: 10px;
+            width: 80%;
         }
-        .image img{
+        .resimler{
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            /* padding: 10px; */
+            margin: 10px;
+            justify-content: space-between;
+            /* width: 80%; */
+        }
+
+        .resimler img {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             border: 1px solid black;
             padding: 10px;
-            margin: auto;
-            width: 20;
+            /* margin: auto; */
+            width: 100px;
+            height: 100px;
         }
+
+        .resimler img:first-child {
+            margin-left: 0;
+        }
+
+        .resimler img:last-child {
+            margin-right: 0;
+        }
+
+        /* .resimler img:nth-child(2n) {
+            width: 20%;
+        }
+
+        .resimler img:nth-child(2n-1) {
+            width: 80%;
+        } */
+
         .lorem{
             margin: 10px;
+            display: flex;
             flex-wrap: row wrap;
             border: 1px solid black;
         }
@@ -82,15 +110,38 @@
             justify-content: space-between;
             justify-content: space-around;
         }
+        .header {
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            padding: 5px;
+            justify-content: space-between;            
+        }
+        .logo {
+            width: 20%;
+        }
+        .sagkisim {
+            display: flex;
+            flex-direction: row;
+        }
+        .sagkisim span {
+            border: 1px solid #000;
+            padding: 5px;
+            margin: 5px;
+        }
     </style>
 </head>
 
 <body>
     <div id="main">
-        <div class="container">
+        <div class="header">
             <!-- Sadece 1 Kutuyu Ele almamız istenecek -->
-            <div class="container"> Giriş Yap </div>
-            <div class="container"> Kayıt ol </div>
+            <div class="logo"> Logo </div>
+            <div class="sagkisim">
+                <span> Giriş Yap </span>
+                <span> Kayıt ol </span>
+            </div>
         </div>
         <div class="kategori" >
             <div>Ana Sayfa</div>
@@ -108,11 +159,13 @@
                 <li>iş ilanları</li>
               </ul>
             </div>
-            <div class="image">
-                    <img src="1.jpg" width="100px" height="100px" />
-                    <img src="manzara_resimleri2.jpg" width="100px" height="100px" />
-                    <img src="manzara-resimleri-23-630x325.jpg" width="100px" height="100px" />
-                    <img src="rick_and_morty_attacking_4k_hd-t2.jpg" width="100px" height="100px" />
+            <div class="govde">
+                <div class="resimler">
+                    <img src="1.jpg" />
+                    <img src="manzara_resimleri2.jpg" />
+                    <img src="manzara-resimleri-23-630x325.jpg" />
+                    <img src="rick_and_morty_attacking_4k_hd-t2.jpg" />
+                </div>
                 <div class="lorem">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
                     dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
