@@ -28,9 +28,9 @@
         }
 
         .header {
-            border: 1px solid #000;
             display: flex;
             flex-direction: row; /* olmalı : satırda mı sütunda mı çalışıyoruz bilmeliyiz. Varsayılan column yani sütundur. */
+            border: 1px solid #000;
             /* space-between kullandığımda 1. elemandan sonraki gelecek olan eleman kalan boşluğun ortasına konumlanacaktır. (Toplamda 2 sütun seçildi.) 
             Satırda bulunan 2. sütunu sağ kısma itelemek istiyorsak bunun için bize bir tane daha div gerekli
             */
@@ -68,14 +68,17 @@
             font-size: 12px;
             display: flex;
             justify-content: center;
+            /* gap : 10px 15px column, row */
             column-gap: 15px; /* doğru kullanım */
-            padding: 10px; /* eklenebilir */
+            /* eklenebilir */
+            padding: 10px;
         }
 
         /* tüm a elemanları için geçerli olacaktır. Farklı alanlarda farklı özellikler belirtmek daha doğru değil mi? */
-        a {
+        .kategori a {
             text-decoration: none;
             color: black;
+            border: 1px solid #000;
         }
 
         .govde {
@@ -141,13 +144,13 @@
         .footer ul {
             display: flex;
             list-style: none;
-            justify-content: space-evenly;
             column-gap: 15px;
             padding: 0;
         }
 
         /* neden listeyi .footer elemanı ile bağladım ? direkt olarak ul li yazamaz mıydım ? */
         .footer ul li {
+            /* justify-content: space-evenly; */
             font-size: 12px;
         }
     </style>
@@ -167,7 +170,6 @@
             </div>
             <br>
         </div>
-       
         <div class="kategori">
             <a href="">Ana Sayfa</a>
             <a href="">Ürünler</a>
@@ -195,7 +197,6 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Japanese_Buckwheat_Flower.JPG"
                         alt="buckwheatflower" width="100px" height="100px">
                 </div>
-
                 <div class="paragraf_govde">
                     <p>
                         Lorem Ipsum Nedir?
@@ -213,7 +214,6 @@
                 </div>
             </div>
         </div>
-        <!-- <br> -->
         <div class="footer">
             <ul>
                 <li>Facebook</li>

@@ -3,7 +3,7 @@
 <head>
 <style>
 .excontainer {
-  height: 250px;
+  min-height: 250px;
 }
 .item1 { grid-area: header; }
 .item2 { 
@@ -23,8 +23,8 @@
   grid-template-areas:
     'header header header header header header'
     'topmenu topmenu topmenu topmenu topmenu topmenu'    
-    'menu main main main main main'
-    'footer footer footer footer footer footer';
+    'menu menu main main main main'
+    'menu menu footer footer footer footer';
   grid-gap: 10px;
   background-color: #2196F3;
   padding: 10px;
@@ -48,8 +48,7 @@
   <div class="item1">Header</div>
   <div class="item6">TopMenu</div>
   <div class="item2 excontainer">Menu</div>
-  <div class="item3 excontainer">Main</div>  
-  
+  <div class="item3 excontainer">Main</div>
   <div class="item5">Footer</div>
 </div>
 
