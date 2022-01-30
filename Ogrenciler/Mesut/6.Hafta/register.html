@@ -25,7 +25,6 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            /* margin: auto; */
             width: 100%;
             height: 75px;
         }
@@ -38,20 +37,6 @@
         .g-col-12 {
             height: 60px;
             flex-direction: row;
-            /* flex-wrap: wrap; */
-            /* margin: auto; */
-            /* justify-content: space-between; */
-            /* justify-content: space-around; */
-        }
-
-        .footer{
-            /* height: 50px; */
-            /* display: flex ; */
-            /* flex-direction: row; */
-            /* flex-wrap: wrap; */
-            /* margin: auto; */
-            /* justify-content: space-between; */
-            /* justify-content: space-around; */
         }
         
         .border-1-solid-black {
@@ -85,44 +70,97 @@
                 </div>    
             </div>
             <div class="col-xl-2 ms-auto height-75 align-items-center d-flex justify-content-between">
-                <a href = "login.html" target = "_blank" class="btn btn-outline-primary ms-xl-2"> Giriş Yap </a>
-                <a href="register.html" target="_blank" class="btn btn-outline-primary ms-xl-2"> Kayıt Ol </a>
+                <div><a href="login.html"> Giriş Yap</a> </div>
+                <div><a href="register.html"> Kayıt ol</a> </div>
             </div>
         </div>
         <div class="row border-1-solid-black">
             <!-- 12/4 -->
             <div class="d-flex justify-content-around g-col-12 border-1-solid-black align-items-center">
-                <a href="index.html" target="_blank" > Ana Sayfa </a>
-                <a href="products.html" target="_blank"> Ürünler </a>
-                <a href="about.html" target="_blank"> Biz Kimiz </a>
-                <a href="contact.html" target="_blank"> İletişim </a>
+                <div><a href="index.html"> Ana Sayfa</a></div>
+                <div><a href="products.html">Ürünler</a></div>
+                <div><a href="aboutus.html">Biz Kimiz</a></div>
+                <div><a href="contact.html">letişim</a></div>
             </div>
             <div class="height-400 px-xl-4 pt-xl-2">
                 <div class="lorem">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                    standard
-                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                    more
-                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                    standard
-                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                    more
-                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                    standard
-                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen
-                    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                    more
-                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <div class="container  border border-1">
+                        <div class="display-6 text-center"> Kayıt Ol Ekranı </div>
+                        <form method="POST" action="login">
+                            <div class="offset-4">
+                                <div class="row">
+                                    <div class="col-4 mt-2">
+                                        <label for="Ad" class="form-label"> Ad </label>
+                                        <input type="text" class="form-control" id="Ad">
+                                    </div>
+                                    <div class="col-4 mt-2">
+                                        <label for="Soyad" class="form-label"> Soyad </label>
+                                        <input type="text" class="form-control" id="Soyad">
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-8 mt-2">
+                                        <label for="Soyad" class="form-label me-2"> Cinsiyet: </label>
+                                        <div class="form-check-inline offset-1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="M">
+                                            <label class="form-check-label" for="inlineRadio1">Erkek</label>
+                                        </div>
+                                        <div class="form-check-inline offset-1">
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="F">
+                                            <label class="form-check-label" for="inlineRadio2">Kadın</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3 mt-2">
+                                        <label for="DTarih" class="form-label"> Doğum Tarihi: </label>
+                                        <input type="date" class="form-control" id="DTarih">
+                                    </div>
+                                </div>
+                
+                                <div class="row">
+                                    <div class="col-8 mt-2">
+                                        <label for="Hakkinda" class="form-label"> Hakkında: </label>
+                                        <textarea class="form-control" id="Hakkinda" rows="3"></textarea>
+                                    </div>
+                                </div>
+                
+                                <div class="row">
+                                    <div class="col-8 mt-2">
+                                        <label for="Email2" class="form-label"> E-Posta Adresi: </label>
+                                        <input type="email" class="form-control" id="Email2">
+                
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8 mt-2">
+                                        <div class="form-check-inline">
+                                            <label for="Password2" class="form-label"> Parola: </label>
+                                            <input type="password" class="form-control" id="Password2">
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label for="Password3" class="form-label"> Parola Tekrar: </label>
+                                            <input type="password" class="form-control" id="Password3">
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="row">
+                                    <div class="col-8 mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="BeniHatirla">
+                                        <label class="form-check-label" for="BeniHatirla">
+                                            Beni Hatırla
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8 mt-2">
+                                        <button type="submit" class="btn btn-primary rounded-0 w-100 my-2"> Kayıt Ol </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="d-flex height-50">
