@@ -48,28 +48,27 @@
                 status: false
             }];
 
-
+        console.log("Mesut GÜLSOY Bilgileri:");
         for (i = 0; i < ClassData.length; i++) {
             if (i == 1) {
-                console.log("Mesut GÜLSOY Bilgileri:");
-                console.log(ClassData[i]);
+                console.log(ClassData[i].image);
+                console.log(ClassData[i].stdNo);
+                console.log(ClassData[i].fullName);
+                console.log(ClassData[i].status);
             }
-            
         }
+
         console.log("------------");
+
         console.log("Mesut GÜLSOY Hariç öğrenci Bilgileri:");
         for (i = 0; i < ClassData.length; i++) {
             if (i != 1) {
-              
-                console.log(ClassData[i]);
+                console.log(ClassData[i].image);
+                console.log(ClassData[i].stdNo);
+                console.log(ClassData[i].fullName);
+                console.log(ClassData[i].status);
             }
-            
         }
-
-
-
-
-
     </script>
 </body>
 
