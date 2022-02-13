@@ -235,13 +235,74 @@
     // }
 
     //
-    for(i=0;i<1;i++){
-        console.log(ClassData[i]);
-    }
+    // for(i=0;i<1;i++){
+    //     console.log(ClassData[i]);
+    // }
     
-    for(i=0;i<ClassData.length;i++){
-        if(i!=0){
-            console.log(ClassData[i]);
+    // for(i=0;i<ClassData.length;i++){
+    //     if(i!=0){
+    //         console.log(ClassData[i]);
+    //     }
+    // }
+    var Class = [
+    {
+        id: 1,
+        fullName: 'Tarık Yeşilçimen',
+        stdNo:100,
+        firstQuiz:50,
+        secondQuiz:30,
+        status: true
+    },
+    {
+        id: 2,
+        fullName: 'Mesut Gülsoy',
+        stdNo:101,
+        firstQuiz:100,
+        secondQuiz:100,
+        status: true
+    },
+    {
+        id: 3,
+        fullName: 'Gizem Sayar',
+        stdNo:102,
+        firstQuiz:40,
+        secondQuiz:90,
+        status: true
+    },
+    {
+        id: 4,
+        fullName: 'Ümmügülsüm Genç',
+        stdNo:103,
+        firstQuiz:70,
+        secondQuiz:80,
+        status: true
+    },
+    {
+        id: 5,
+        fullName: 'Erhan Öztürk',
+        stdNo:104,
+        firstQuiz:90,
+        secondQuiz:95,
+        status: true
+    },
+    {
+        id: 6,
+        fullName: 'Ayşenur Aygün',
+        stdNo:105,
+        firstQuiz:90,
+        secondQuiz:90,
+        status: true
+    }];
+    var first=null;
+    var second=null;
+    var total=null;
+    for(i=0;i<Class.length;i++){
+        first=Class[i].firstQuiz*0.4;
+        second=Class[i].secondQuiz*0.6;
+        total=(first+second)/2;
+        if((total>=50)){
+          console.log(Class[i]);
+          
         }
     }
 </script>
