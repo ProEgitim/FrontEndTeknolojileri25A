@@ -293,16 +293,20 @@
         secondQuiz:90,
         status: true
     }];
-    var first=null;
-    var second=null;
-    var total=null;
-    for(i=0;i<Class.length;i++){
-        first=Class[i].firstQuiz*0.4;
-        second=Class[i].secondQuiz*0.6;
-        total=(first+second)/2;
-        if((total>=50)){
-          console.log(Class[i]);
-          
+    
+    var first = null;
+    var second = null;
+    var total = null;
+
+    for(i=0; i < Class.length; i++){
+        first = Class[i].firstQuiz*0.4;
+        second = Class[i].secondQuiz*0.6;
+        total = first + second;
+
+        if(total >= 50){
+          console.log(Class[i].fullName + " - GEÇTİ");
+        } else {
+          console.log(Class[i].fullName + " - KALDI");
         }
     }
 </script>

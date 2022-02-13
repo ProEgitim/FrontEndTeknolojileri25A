@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Javascript'e Giriş</title>
+</head>
+<body>
+    <div id="main" class="container">
+    </div>
+<script>
+    // Koşullar
+    // if
+    // if else
+    // if else if .. else
+    // if (true) { ... } else { false }
+
+    var number = 100;
+    
+    // if (number == 100) {
+    //     console.log("Sayı 100 dür");
+    // }
+
+    // if (number == 100) {
+    //     console.log("Sayı 100 dür.");
+    // } else if (number < 100) {
+    //     console.log("Sayı 100 den küçüktür.");
+    // } else {
+    //     console.log("Sayı 100 den büyüktür.");
+    // }
+
+    //console.log(number == 100 ? "Sayı 100 dür" : "Sayı 100 değil");
+    //console.log(number == 100 ? "Sayı 100 dür" : number < 100 ? "Sayı 100 den küçüktür" : "Sayı 100 den büyüktür." );
+
+    //console.log(number == 100 ? "Sayı 100 dür" : "");
+
+    // Switch
+
+    // switch(date.getMonth()) {
+    //     case 0: console.log("Ocak");
+    //     break;
+    //     case 1: console.log("Şubat");
+    //     break;
+    //     case 2: console.log("Mart");
+    //     break;
+    //     case 3: console.log("Nisan");
+    //     break;
+    //     case 4: console.log("Mayıs");
+    //     break;
+    //     case 5: console.log("Haziran");
+    //     break;
+    //     case 6: console.log("Temmuz");
+    //     break;
+    //     case 7: console.log("Ağustos");
+    //     break;
+    //     case 8: console.log("Eylül");
+    //     break;
+    //     case 9: console.log("Ekim");
+    //     break;
+    //     case 10: console.log("Kasım");
+    //     break;
+    //     case 11: console.log("Aralık");
+    //     break;
+    // }
+
+    var splittedArray = value.split(" ");
+    var array = ["1. Veri", "2. Veri", "3. Veri", "4. Veri"];
+
+    var ClassData = [
+    {
+        id: 1,
+        image: 'a.jpg',
+        stdNo: 1,
+        fullName: 'Tarık Yeşilçimen',
+        status: true
+    },
+    {
+        id: 2,
+        image: 'b.jpg',
+        stdNo: 2,
+        fullName: 'Mesut Gülsoy',
+        status: true
+    },
+    {
+        id: 3,
+        image: 'c.jpg',
+        stdNo: 3,
+        fullName: 'Gizem Sayar',
+        status: true
+    },
+    {
+        id: 4,
+        image: 'd.jpg',
+        stdNo: 4,
+        fullName: 'Ümmügülsüm Genç',
+        status: true
+    },
+    {
+        id: 5,
+        image: 'e.jpg',
+        stdNo: 5,
+        fullName: 'Erhan Öztürk',
+        status: false
+    },
+    {
+        id: 6,
+        image: 'f.jpg',
+        stdNo: 6,
+        fullName: 'Ayşenur Aygün',
+        status: false
+    }];
+    
+    // Örnek 1- Split edilmiş veri çıktısı
+    // for(i = 0; i < splittedArray.length; i++) {
+    //     console.log(splittedArray[i]);
+    // }
+    
+    // Örnek 2- Array çıktısı
+    // for(i = 0; i < ClassData.length; i++) {
+    //     console.log(array[i]);
+    // }
+
+    // Örnek 3- Object çıktısı
+    // for(i = 0; i < ClassData.length; i++) {
+    //     console.log(ClassData[i].stdNo);
+    // }
+    
+    var stdId = 3;
+
+    // Workshop -1
+    // for(i = 0; i < ClassData.length; i++) {
+    //     if(ClassData[i].id == stdId) {
+    //         console.log(ClassData[i].image);
+    //         console.log(ClassData[i].stdNo);
+    //         console.log(ClassData[i].fullName);
+    //         console.log(ClassData[i].status);
+    //     break;
+    //     }
+    // }
+
+    // console.log("_________");
+
+    // Workshop -2
+    // for(i = 0; i < ClassData.length; i++) {
+    //     if(ClassData[i].id != stdId) {
+    //         console.log(ClassData[i].image);
+    //         console.log(ClassData[i].stdNo);
+    //         console.log(ClassData[i].fullName);
+    //         console.log(ClassData[i].status);
+    //     }
+    // }
+
+    // Workshop -3
+    // for(i = 0; i < ClassData.length; i++) {
+    //     if(ClassData[i].status) {
+    //         console.log(ClassData[i].image);
+    //         console.log(ClassData[i].stdNo);
+    //         console.log(ClassData[i].fullName);
+    //         console.log(ClassData[i].status);
+    //     }
+    // }
+
+    // Workshop -4
+    // for(i = 0; i < ClassData.length; i++) {
+    //     if(!ClassData[i].status) {
+    //         console.log(ClassData[i].image);
+    //         console.log(ClassData[i].stdNo);
+    //         console.log(ClassData[i].fullName);
+    //         console.log(ClassData[i].status);
+    //     }
+    // }
+
+    // For in Döngüsü
+    // for(i in array) {
+    //     console.log(array[i])
+    // }
+
+    // While Döngüsü
+    //var i = 0;
+
+    // while(i < array.length / 2) {
+    //     console.log(array[i]);
+    //     i = i + 1; //i++
+    // }
+
+    // while(false) {
+    //     console.log(array[i]);
+    //     i = i + 1; //i++
+    // } // Döngüye girmez
+
+    // Do While Döngüsü
+    // do {
+    //     console.log(array[i]);
+    //     i = i + 1;
+    // }
+    // while(false);
+
+    // Break
+    // for(i = 0; i < ClassData.length; i++) {
+    //     if(i == 4) break;
+    //     console.log(ClassData[i].image);
+    //     console.log(ClassData[i].stdNo);
+    //     console.log(ClassData[i].fullName);
+    //     console.log(ClassData[i].status);
+    // }
+
+    // Continue
+    // for(i = 0; i < ClassData.length; i++) {
+    //     if(i == 2) continue;
+    //     console.log(ClassData[i].image);
+    //     console.log(ClassData[i].stdNo);
+    //     console.log(ClassData[i].fullName);
+    //     console.log(ClassData[i].status);
+    // }
+
+    // Workshop -5 (id, studentNumber, fullName, firstQuiz, secondQuiz, status) 
+        // firstQuiz yüzde 40, secondQuiz yüzde 60, ikisinin ortalaması 50 den büyük ve eşitse 
+        // fullName yaz ve yanına GEÇTİ yaz, küçükse fullName yaz ve yanına KALDI yaz
+
+    var Class = [
+    {
+        id: 1,
+        fullName: 'Tarık Yeşilçimen',
+        stdNo: 100,
+        firstQuiz: 50,
+        secondQuiz: 30,
+        status: true,
+        fullNameOutput: function() {
+            return this.fullName + " - "
+        },
+        firstQuizOutput: function() {
+            return this.firstQuiz * 0.4
+        },
+        secondQuizOutput: function() {
+            return this.secondQuiz * 0.6
+        },
+        avarageQuizOutput: function() {
+            return this.firstQuizOutput() + this.secondQuizOutput()
+        },
+        isSuccess: function() {
+            return this.avarageQuizOutput() >= 50 ? " => GEÇTİ" : " => KALDI"
+        },
+        totalOutput: function() {
+            return this.fullNameOutput() + this.avarageQuizOutput() + this.isSuccess()
+        }
+    },
+    {
+        id: 2,
+        fullName: 'Mesut Gülsoy',
+        stdNo:101,
+        firstQuiz:100,
+        secondQuiz:100,
+        status: true,
+        fullNameOutput: function() {
+            return this.fullName + " - "
+        },
+        firstQuizOutput: function() {
+            return this.firstQuiz * 0.4
+        },
+        secondQuizOutput: function() {
+            return this.secondQuiz * 0.6
+        },
+        avarageQuizOutput: function() {
+            return this.firstQuizOutput() + this.secondQuizOutput()
+        },
+        isSuccess: function() {
+            return this.avarageQuizOutput() >= 50 ? " => GEÇTİ" : " => KALDI"
+        },
+        totalOutput: function() {
+            return this.fullNameOutput() + this.avarageQuizOutput() + this.isSuccess()
+        }
+    },
+    {
+        id: 3,
+        fullName: 'Gizem Sayar',
+        stdNo:102,
+        firstQuiz:40,
+        secondQuiz:90,
+        status: true,
+        fullNameOutput: function() {
+            return this.fullName + " - "
+        },
+        firstQuizOutput: function() {
+            return this.firstQuiz * 0.4
+        },
+        secondQuizOutput: function() {
+            return this.secondQuiz * 0.6
+        },
+        avarageQuizOutput: function() {
+            return this.firstQuizOutput() + this.secondQuizOutput()
+        },
+        isSuccess: function() {
+            return this.avarageQuizOutput() >= 50 ? " => GEÇTİ" : " => KALDI"
+        },
+        totalOutput: function() {
+            return this.fullNameOutput() + this.avarageQuizOutput() + this.isSuccess()
+        }
+    },
+    {
+        id: 4,
+        fullName: 'Ümmügülsüm Genç',
+        stdNo:103,
+        firstQuiz:70,
+        secondQuiz:80,
+        status: true,
+        fullNameOutput: function() {
+            return this.fullName + " - "
+        },
+        firstQuizOutput: function() {
+            return this.firstQuiz * 0.4
+        },
+        secondQuizOutput: function() {
+            return this.secondQuiz * 0.6
+        },
+        avarageQuizOutput: function() {
+            return this.firstQuizOutput() + this.secondQuizOutput()
+        },
+        isSuccess: function() {
+            return this.avarageQuizOutput() >= 50 ? " => GEÇTİ" : " => KALDI"
+        },
+        totalOutput: function() {
+            return this.fullNameOutput() + this.avarageQuizOutput() + this.isSuccess()
+        }
+    },
+    {
+        id: 5,
+        fullName: 'Erhan Öztürk',
+        stdNo:104,
+        firstQuiz:90,
+        secondQuiz:95,
+        status: true,
+        fullNameOutput: function() {
+            return this.fullName + " - "
+        },
+        firstQuizOutput: function() {
+            return this.firstQuiz * 0.4
+        },
+        secondQuizOutput: function() {
+            return this.secondQuiz * 0.6
+        },
+        avarageQuizOutput: function() {
+            return this.firstQuizOutput() + this.secondQuizOutput()
+        },
+        isSuccess: function() {
+            return this.avarageQuizOutput() >= 50 ? " => GEÇTİ" : " => KALDI"
+        },
+        totalOutput: function() {
+            return this.fullNameOutput() + this.avarageQuizOutput() + this.isSuccess()
+        }
+    },
+    {
+        id: 6,
+        fullName: 'Ayşenur Aygün',
+        stdNo:105,
+        firstQuiz:90,
+        secondQuiz:90,
+        status: true,
+        fullNameOutput: function() {
+            return this.fullName + " - "
+        },
+        firstQuizOutput: function() {
+            return this.firstQuiz * 0.4
+        },
+        secondQuizOutput: function() {
+            return this.secondQuiz * 0.6
+        },
+        avarageQuizOutput: function() {
+            return this.firstQuizOutput() + this.secondQuizOutput()
+        },
+        isSuccess: function() {
+            return this.avarageQuizOutput() >= 50 ? " => GEÇTİ" : " => KALDI"
+        },
+        totalOutput: function() {
+            return this.fullNameOutput() + this.avarageQuizOutput() + this.isSuccess()
+        }
+    }];
+
+    //console.log(Class[0].output() + Class[0].firstQuizOutput() + Class[0].secondQuizOutput())
+    //console.log(Class[0].totalOutput())
+
+    // var classArray = null;
+
+    // for(i=0; i < Class.length; i++){
+    //     classArray = Class[i];
+
+    //     if(classArray.firstQuiz * 0.4 + classArray.secondQuiz * 0.6 >= 50){
+    //       console.log(classArray.fullName + " - GEÇTİ");
+    //     } else {
+    //       console.log(classArray.fullName + " - KALDI");
+    //     }
+    // }
+
+    // for(i = 0; i < Class.length; i++){
+    //     console.log(Class[i].totalOutput())
+    // }
+
+    // console.log(Class[2].fullName)
+    // console.log(Class[2]["fullName"])
+</script>
+</body>
+</html>
