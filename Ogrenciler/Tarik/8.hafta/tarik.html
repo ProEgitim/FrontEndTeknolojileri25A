@@ -123,6 +123,192 @@
     // } else {
     //     alert("Yıl 2022")
     // }
+
+    // Koşullar
+    // if
+    // if else
+    // if else if .. else
+    // if (true) { ... } else { false }
+
+    var number = 100;
+    
+    // if (number == 100) {
+    //     console.log("Sayı 100 dür");
+    // }
+
+    // if (number == 100) {
+    //     console.log("Sayı 100 dür.");
+    // } else if (number < 100) {
+    //     console.log("Sayı 100 den küçüktür.");
+    // } else {
+    //     console.log("Sayı 100 den büyüktür.");
+    // }
+
+    //console.log(number == 100 ? "Sayı 100 dür" : "Sayı 100 değil");
+    //console.log(number == 100 ? "Sayı 100 dür" : number < 100 ? "Sayı 100 den küçüktür" : "Sayı 100 den büyüktür." );
+
+    //console.log(number == 100 ? "Sayı 100 dür" : "");
+
+    // Switch
+
+    // switch(date.getMonth()) {
+    //     case 0: console.log("Ocak");
+    //     break;
+    //     case 1: console.log("Şubat");
+    //     break;
+    //     case 2: console.log("Mart");
+    //     break;
+    //     case 3: console.log("Nisan");
+    //     break;
+    //     case 4: console.log("Mayıs");
+    //     break;
+    //     case 5: console.log("Haziran");
+    //     break;
+    //     case 6: console.log("Temmuz");
+    //     break;
+    //     case 7: console.log("Ağustos");
+    //     break;
+    //     case 8: console.log("Eylül");
+    //     break;
+    //     case 9: console.log("Ekim");
+    //     break;
+    //     case 10: console.log("Kasım");
+    //     break;
+    //     case 11: console.log("Aralık");
+    //     break;
+    // }
+
+    var splittedArray = value.split(" ");
+    var array = ["1. Veri", "2. Veri", "3. Veri", "4. Veri"];
+
+    var ClassData = [
+    {
+        image: 'a.jpg',
+        stdNo: 1,
+        fullName: 'Tarık Yeşilçimen',
+        status: true
+    },
+    {
+        image: 'b.jpg',
+        stdNo: 2,
+        fullName: 'Mesut Gülsoy',
+        status: true
+    },
+    {
+        image: 'c.jpg',
+        stdNo: 3,
+        fullName: 'Gizem Sayar',
+        status: true
+    },
+    {
+        image: 'd.jpg',
+        stdNo: 4,
+        fullName: 'Ümmügülsüm Genç',
+        status: true
+    },
+    {
+        image: 'e.jpg',
+        stdNo: 5,
+        fullName: 'Erhan Öztürk',
+        status: false
+    },
+    {
+        image: 'f.jpg',
+        stdNo: 6,
+        fullName: 'Ayşenur Aygün',
+        status: false
+    }];
+    
+    // Örnek 1- Split edilmiş veri çıktısı
+    // for(i = 0; i < splittedArray.length; i++) {
+    //     console.log(splittedArray[i]);
+    // }
+    
+    // Örnek 2- Array çıktısı
+    // for(i = 0; i < ClassData.length; i++) {
+    //     console.log(array[i]);
+    // }
+
+    // Örnek 3- Object çıktısı
+    // for(i = 0; i < ClassData.length; i++) {
+    //     console.log(ClassData[i].stdNo);
+    // }
+
+    //
+    // for(i=0;i<1;i++){
+    //     console.log(ClassData[i]);
+    // }
+    
+    // for(i=0;i<ClassData.length;i++){
+    //     if(i!=0){
+    //         console.log(ClassData[i]);
+    //     }
+    // }
+    var Class = [
+    {
+        id: 1,
+        fullName: 'Tarık Yeşilçimen',
+        stdNo:100,
+        firstQuiz:50,
+        secondQuiz:30,
+        status: true
+    },
+    {
+        id: 2,
+        fullName: 'Mesut Gülsoy',
+        stdNo:101,
+        firstQuiz:100,
+        secondQuiz:100,
+        status: true
+    },
+    {
+        id: 3,
+        fullName: 'Gizem Sayar',
+        stdNo:102,
+        firstQuiz:40,
+        secondQuiz:90,
+        status: true
+    },
+    {
+        id: 4,
+        fullName: 'Ümmügülsüm Genç',
+        stdNo:103,
+        firstQuiz:70,
+        secondQuiz:80,
+        status: true
+    },
+    {
+        id: 5,
+        fullName: 'Erhan Öztürk',
+        stdNo:104,
+        firstQuiz:90,
+        secondQuiz:95,
+        status: true
+    },
+    {
+        id: 6,
+        fullName: 'Ayşenur Aygün',
+        stdNo:105,
+        firstQuiz:90,
+        secondQuiz:90,
+        status: true
+    }];
+    
+    var first = null;
+    var second = null;
+    var total = null;
+
+    for(i=0; i < Class.length; i++){
+        first = Class[i].firstQuiz*0.4;
+        second = Class[i].secondQuiz*0.6;
+        total = first + second;
+
+        if(total >= 50){
+          console.log(Class[i].fullName + " - GEÇTİ");
+        } else {
+          console.log(Class[i].fullName + " - KALDI");
+        }
+    }
 </script>
 </body>
 </html>

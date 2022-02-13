@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var ClassData = [
+            {
+                id: 1,
+                studentNumber: 1,
+                fullName: 'Tarık Yeşilçimen',
+                firstQuiz:50,
+                secondQuiz:60,
+                status:true
+            },
+            {
+                id: 2,
+                studentNumber: 2,
+                fullName: 'Mesut Gülsoy',
+                firstQuiz:30,
+                secondQuiz:40,
+                status:true
+            },
+            {
+                id: 3,
+                studentNumber: 3,
+                fullName: 'Gizem Sayar',
+                firstQuiz:70,
+                secondQuiz:60,
+                status:true
+            },
+            {
+                id: 4,
+                studentNumber: 4,
+                fullName: 'Ümmügülsüm Genç',
+                firstQuiz:80,
+                secondQuiz:60,
+                status:true
+            },
+            {
+                id: 5,
+                studentNumber: 5,
+                fullName: 'Erhan Öztürk',
+                firstQuiz:20,
+                secondQuiz:30,
+                status:true
+            },
+            {
+                id: 6,
+                studentNumber: 6,
+                fullName: 'Ayşenur Aygün',
+                firstQuiz:30,
+                secondQuiz:60,
+                status:true
+            }
+        ];
+
+        for(i = 0; i < ClassData.length; i++) {
+            if((ClassData[i].firstQuiz*40/100) + (ClassData[i].secondQuiz*60/100) >= 50){
+                console.log(ClassData[i].fullName+"=> GEÇTİ");
+            }
+            else
+            console.log(ClassData[i].fullName+"=> KALDI");
+        }
+
+        console.log("---------------");
+        console.log("WHİLE Döngüsü");
+        var sayac=0;
+
+        // while(sayac<ClassData.length){
+        //     if((ClassData[sayac].firstQuiz*40/100)+(ClassData[sayac].secondQuiz*60/100)>=50){
+        //         console.log(ClassData[sayac].fullName+"=> GEÇTİ");
+        //     }
+        //     else
+        //     console.log(ClassData[sayac].fullName+"=> KALDI");
+
+        //     sayac++;//sayac=sayac+1;
+        // }
+       
+        // Workshop -5 (id, studentNumber, fullName, firstQuiz, secondQuiz, status) 
+        // firstQuiz yüzde 40, secondQuiz yüzde 60, ikisinin ortalaması 50 den büyük ve eşitse 
+        // fullName yaz ve yanına GEÇTİ yaz, küçükse fullName yaz ve yanına KALDI yaz
+
+    </script>
+</body>
+
+</html>
