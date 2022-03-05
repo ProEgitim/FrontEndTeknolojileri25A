@@ -1,0 +1,29 @@
+header {
+    border: 1px solid #000;
+    height: 125px;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    /* color: #ca0a0a; */ /**** CA : RR, 0a : GG, 0a : BB ****/
+    /* color: rgb(180, 21, 21, 0.15); */
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        border: 1px solid #000;
+        height: 25px;
+        font-size: 9px;
+        color: blue;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        border: 1px solid #000;
+        height: 50px;
+        font-size: 11px;
+        color: blue;
+        text-align: center;
+    }
+}
