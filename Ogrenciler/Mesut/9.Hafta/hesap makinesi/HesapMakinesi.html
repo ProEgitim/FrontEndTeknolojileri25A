@@ -45,7 +45,7 @@
                     <td><input type = "button" class="button" id="1" value = "1" onclick="add(1)"></td>
                     <td><input type = "button" class="button" id="2" value = "2" onclick="add(2)"></td>
                     <td><input type = "button" class="button" id="3" value = "3" onclick="add(3)"></td>
-                    <td rowspan = "2"><input style = "height: 105px;" class="button" type = "button"  id="=" value = "=" onclick="calculate()"></td>
+                    <td rowspan = "2"><input style = "height: 105px;" class="button" type = "button"  id="=" value = "=" onclick="add('=')"></td>
                 </tr>
                 <tr>
                     <td colspan = "2"><input class="button" style = "width: 105px;" type = "button"  id="0" value = "0" onclick="add(0)"></td>
@@ -63,45 +63,57 @@
 
     <script>
         function add(deger){
+            var sonuc;
+            var ilkSayi;
+            var ikinciSayi;
+            console.log(document.getElementById("operator").value);
                     console.log(typeof(deger));
       //      if(typeof(deger))
             if(Number.isInteger(deger)){
                 document.getElementById("text").value+=deger;
                 console.log("xx");
             }
-            else{
-            document.getElementById("ilkSayi").value=ilkSayi;
+            else if(document.getElementById("operator").value==""){
+                ilkSayi=document.getElementById("text").value;
+            document.getElementById("operator").value=deger;
+            document.getElementById("text2").value+=ilksayi+deger;        
+
+            console.log(document.getElementById("operator").value);
+            }
+            else if(document.getElementById("operator").value!=""){
+                ikinciSayi=document.getElementById("ikinciSayi").value;
             document.getElementById("operator").value=deger;
             document.getElementById("text").value+=deger;
             console.log(document.getElementById("operator").value);
             }
-            // else{
+            else if(deger=='=')
+            {
                
-                
-            // switch (deger) {
-            //     case "+":
-            //         sonuc=ilkSayi+ikinciSayi;
-            //         break;
-            //         case "-":
-            //         sonuc=ilkSayi-ikinciSayi;
-            //         break;
-            //         case "/":
-            //         sonuc=ilkSayi/ikinciSayi;
-            //         break;
-            //         case "*":
-            //         sonuc=ilkSayi*ikinciSayi;
-            //         break;
-            //         case "%":
-            //         sonuc=ilkSayi%ikinciSayi;
-            //         break;
-            //         default:
-            //         document.getElementById("text").value = "Yanlış Giriş";
-                   
-            //      //   break;
+                console.log("ssss");
+            switch (deger) {
+                case "+":
+                    sonuc=ilkSayi+ikinciSayi;
+                    break;
+                    case "-":
+                    sonuc=ilkSayi-ikinciSayi;
+                    break;
+                    case "/":
+                    sonuc=ilkSayi/ikinciSayi;
+                    break;
+                    case "*":
+                    sonuc=ilkSayi*ikinciSayi;
+                    break;
+                    case "%":
+                    sonuc=ilkSayi%ikinciSayi;
+                    break;
+                    default:
+                    document.getElementById("text").value = "Yanlış Giriş";                   
+                    break;
                     
 
-            // }
-            // }
+            }
+            document.getElementById("text2").value=sonuc;
+            }
         }
 
         function Hesapla2() {
