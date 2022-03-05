@@ -19,7 +19,7 @@
             <input placeholder="İkinci Sayıyı Giriniz" type = "text" id="ikinciSayi">
             <button placeholder="Hesapla" id="hesapla" onclick="Hesapla()">Hesapla</button>
             <input type = "text" id="sonuc" disabled>
-
+            <!-- <div id="sonuc"></div> -->
 
         </div>
 
@@ -28,12 +28,13 @@
 <script>
   function Hesapla(){
     var ilkSayi = document.getElementById("ilkSayi").value;
-    var type = typeof ilkSayi;
-    var islem = document.getElementById("islem").value;
     var ikinciSayi = document.getElementById("ikinciSayi").value;
+    //var type = typeof ilkSayi;
+    var islem = document.getElementById("islem").value;
 
     var sonuc = "";
 
+    // Event keyPress
     if(islem == "+"){
         sonuc = ilkSayi + ikinciSayi;
     }
