@@ -20,6 +20,7 @@
             <button placeholder="Hesapla" id="hesapla" onclick="Hesapla()">Hesapla</button>
             <input type = "text" id="sonuc" disabled>
             <!-- <div id="sonuc"></div> -->
+            <!-- Her bir input için ilgili değerlerin kontrol edilmesi (Örn: 1. İnput için girilen ifade sayısal mı ?) -->
 
         </div>
 
@@ -35,6 +36,13 @@
     var sonuc = "";
 
     // Event keyPress
+    // sonuc = 
+    // islem == "+" ? ilkSayi + ikinciSayi : 
+    // islem == "-" ? ilkSayi - ikinciSayi : 
+    // islem == "*" ? ilkSayi * ikinciSayi : 
+    // islem == "/" ? ilkSayi / ikinciSayi : controls('doError')
+
+
     if(islem == "+"){
         sonuc = ilkSayi + ikinciSayi;
     }
