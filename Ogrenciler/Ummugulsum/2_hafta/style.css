@@ -26,3 +26,11 @@ td{
 #reklamAlani{
     background-color: rgb(59, 178, 187);
 }
+div{
+    background-color: violet;
+    
+}
+div > #baslik{
+    background-color: rgb(52, 42, 187);
+    
+}
