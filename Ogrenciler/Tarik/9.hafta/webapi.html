@@ -9,16 +9,31 @@
     <title>Web API's</title>
 </head>
 <body>
+  <div class="container mt-5">
+    <div class="input-group mb-3">
+      <input type="text" id="input"  class="form-control" placeholder="Arayınız" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button id="btn" class="btn btn-outline-primary"  onclick="searchFunctinon()" type="button">Ara</button>
+      </div>
+    </div>
+    <div class="row">
+      <div id="searchResult" class="searchResult">
+
+      </div>
+    </div>
+  </div>
+
 
 <!-- Search bar olacak,
 Arama kelimesi girildiğinde searchResult Kullanılarak bize bu kelime eğer (completed true ise ekrana yazdırsın, değilse (Veri bulunamadı) yazsın) -->
 <script>
+
 var searchResult = [
   {
     "userId": 1,
     "id": 1,
-    "title": "delectus aut autem",
-    "completed": false
+    "title": "tarık aut autem",
+    "completed": true
   },
   {
     "userId": 1,
@@ -507,6 +522,22 @@ var searchResult = [
     "completed": false
   }
 ]
+
+
+function searchFunctinon(){ 
+  var inputValue = document.getElementById("input").value;
+  var result = searchResult.map((e)=>{
+     if(e.title.includes(inputValue)&& e.completed==true){
+       document.getElementById("searchResult").innerHTML+=`${e.title} <br>`
+     }
+    })
+    console.log(result)
+  if(isNaN(result) || result==undefined){
+      console.log("Veri bulunamadı")
+      document.getElementById("searchResult").innerHTML+="Veri bulunamadı <br>"
+  }
+
+}
 </script>
 </body>
 </html>
