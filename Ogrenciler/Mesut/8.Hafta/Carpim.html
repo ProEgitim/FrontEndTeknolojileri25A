@@ -10,6 +10,9 @@
 </head>
 <body>
     <div id="main" class="container">
+        <div class="row">
+
+        </div>
     </div>
 <script>
     // Prototype
@@ -20,31 +23,42 @@
         // secondQuiz: 100,
         // status: true,
 
-    const Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const Array = [ 1, 2, 3, 4, 5, 6, 7, 8, 9,10];
 
-    function Result() {
-        this.id = 2;
-        this.fullName = 'Mesut Gülsoy';
-        this.stdNo = 101;
-        this.firstQuiz = 90;
-        this.secondQuiz = 85;
-    }
-    
-    var studentResult =  new Result();
-    console.log(studentResult.status);
-
-    Result.prototype.status = true;
-
-    console.log(studentResult.status);
-
-    // Workshop -1
-    // Çarpım Tablosunu Ekrana yazan kod
-    for (var x = 1; x <= 10; x++) {
-        for (var i = 1; i <= 10; i++) {
-            console.log(x + "x" + i + "=" + x * i);
+   for(i=1;i<=10;i++){
+        for(y=1;y<=10;y++){
+           console.log(i+"X"+y+"="+i*y)
         }
     }
 
+    const firstArray = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+    const secondArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+    var ResultArray = [];
+   
+    
+ //    var sayac=0;
+  //  for(i=1;i<=10;i++)
+ //   {
+  //     for(y=1;y<=10;y++)
+  //     {
+  //          ResultArray[sayac]=i*y;
+  //        sayac++;  
+  //      } 
+ //   }
+     
+
+//for(i=0;i<ResultArray.length;i++){
+ //   console.log(ResultArray[i]);
+//}
+
+
+    // join()
+    //console.log(firstArray.join(' | '));
+
+    
+
+    // Workshop -1
+    // Çarpım Tablosunu Ekrana yazan kod
 </script>
 </body>
 </html>
