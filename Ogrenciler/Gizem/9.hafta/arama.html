@@ -470,35 +470,29 @@
             }
         ]
 
-        function ara() {
-            aramaarray;
-            var deger = document.getElementById("search");
-            var sonuc = document.getElementById("sonuc");
-            var search = deger.value;
-            var gecici = [];
-                for (let i = 0; i < aramaarray.length; i++) {
-                    //console.log(aramaarray[i].title.includes(search));
-                    if (aramaarray[i].title.includes(search)) {
-                        gecici.length = 1;
-                        gecici.push(aramaarray[i].title);
-                    }                   
-                }
+    function ara() {
+        var deger = document.getElementById("search");
+        var gecici = []; // <-- Sonuç için kullanılacak.
 
-                if(gecici.length < 0)
-                {
-                    sonuc="deger yok";
-                }
-                else{
-                    sonuc = gecici;
-                }
-            }
+        for (let i = 0; i < aramaarray.length; i++) {
+            if (aramaarray[i].title.includes(deger.value) && aramaarray[i].completed == true) {
+                gecici.push(aramaarray[i].title);
+            }                   
+        }
+
+        if(gecici.length == 0) {
+            document.getElementById("sonuc").innerHTML = "deger yok";
+        }
+        else {
+            var splitted = gecici.join("<br />")
+            document.getElementById("sonuc").innerHTML = splitted
+        }
+    }
 </script>
     <div class="container" >
         <input placeholder="Search" type="text" id="search" style = "width: 600px;" >
         <button id="ara" onclick="ara()">Ara</button>
-        <div id = "sonuc">
-            
-        </div>
+        <div id="sonuc"></div>
     </div>
 </body>
 <style>
