@@ -15,14 +15,18 @@
     <div id="div" onmouseover="UzerineGel()" onmouseout="Ayrildiginda()" style="border: 1px solid black; height: 100px ;" value="Siyah"></div>
         
     <script>
+        document.getElementById("div").value= "Siyah";
+        let renk = document.getElementById("div").value= "Siyah";
+
         //onlick event -- Tıklandığında
         function tikla() {
-           document.getElementById("div").style="border: 1px solid red; height: 100px ";
+           document.getElementById("div").style = "border: 1px solid red; height: 100px";
            document.getElementById("div").value= "Kırmızı";
         }
+
         //onmouseover -- Üzerine Gelindiğinde
         function UzerineGel() {
-            let renk = document.getElementById("div").value;
+            renk = document.getElementById("div").value;
             alert("Div'in rengi : " +renk)
         }
 
@@ -32,5 +36,11 @@
         }
     </script>
 </body>
+<style>
+    #div {
+        border: 1px solid black;
+        height: 100px;
+    }
+</style>
 
 </html>
