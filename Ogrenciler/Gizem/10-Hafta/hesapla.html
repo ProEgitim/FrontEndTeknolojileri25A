@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplama Ekranı</title>
+</head>
+
+<body>
+    HESAPLAMA
+
+    <div id="topla">
+        <input id="toplaBirinci" type="text">
+        <input id="toplaIkinci" type="text">
+        <button onclick="Topla()"> TOPLA </button>
+    </div>
+    <div id="cikart">
+        <input id="cikartBirinci" type="text">
+        <input id="cikartIkinci" type="text">
+        <button onclick="Cikart()"> Çıkart </button>
+    </div>
+    <div id="carp">
+        <input id="carpBirinci" type="text">
+        <input id="carpIkinci" type="text">
+        <button onclick="Carp()"> Carp </button>
+    </div>
+    <div id="bol">
+        <input id="bolBirinci" type="text">
+        <input id="bolIkinci" type="text">
+        <button onclick="Bol()"> Bol </button>
+    </div>
+    <br />
+
+    <script src="src/js/topla.js"></script>
+    <script>
+        toplaBirinci = document.getElementById("toplaBirinci").value;
+        toplaIkinci = document.getElementById("toplaIkinci").value;
+        document.getElementById("topla").innerHTML = Topla(toplaBirinci, toplaIkinci);
+
+        function butonaTikla(toplaBirinci, toplaIkinci) {
+            document.getElementById("topla").innerHTML = Topla(toplaBirinci, toplaIkinci)
+        }
+    </script>
+    <script src="src/js/cikart.js"></script>
+    <script>
+        cikartBirinci = document.getElementById("toplaBirinci").value;
+        cikartIkinci = document.getElementById("toplaIkinci").value;
+        document.getElementById("cikart").innerHTML = Cikart(cikartBirinci, cikartIkinci);
+
+        function butonaTikla(toplaBirinci, toplaIkinci) {
+            document.getElementById("cikart").innerHTML = Cikart(cikartBirinci, cikartIkinci)
+        }
+    </script>
+    <script src="src/js/carp.js"></script>
+    <script>
+        carpBirinci = document.getElementById("carpBirinci").value;
+        carpIkinci = document.getElementById("carpIkinci").value;
+        document.getElementById("carp").innerHTML = Carp(carpBirinci, carpIkinci);
+
+        function butonaTikla(carpBirinci, carpIkinci) {
+            document.getElementById("carp").innerHTML = Carp(carpBirinci, carpIkinci)
+        }
+    </script>
+
+</body>
+
+</html>
