@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplama Ekranı</title>
+</head>
+<body>
+    <input type="text" id="birinciTopla" />
+    <input type="text" id="ikinciTopla" />
+    <button onclick="Toplam()"> Topla </button>
+
+    <div id="sonuc1"></div>
+
+    <input type="text" id="birinciCikart" />
+    <input type="text" id="ikinciCikart" />
+    <button onclick="Fark()"> Çıkart </button>
+
+    <div id="sonuc2"></div>
+
+    <input type="text" id="birinciCarpim" />
+    <input type="text" id="ikinciCarpim" />
+    <button onclick="Carpim()"> Çarp </button>
+
+    <div id="sonuc3"></div>
+
+    <input type="text" id="birinciBolme" />
+    <input type="text" id="ikinciBolme" />
+    <button onclick="Bolum()"> Böl </button>
+
+    <div id="sonuc4"></div>
+
+    <script src="src/js/topla.js"></script>
+    <script src="src/js/cikart.js"></script>
+    <script src="src/js/carp.js"></script>
+    <script src="src/js/bol.js"></script>
+
+    <script>
+        function Toplam() {
+            let birinciSayi = parseInt(document.getElementById("birinciTopla").value)
+            let ikinciSayi = parseInt(document.getElementById("ikinciTopla").value)
+            
+            document.getElementById("sonuc1").innerHTML = Topla(birinciSayi, ikinciSayi)
+        }
+
+        function Fark() {
+            let birinciSayi = document.getElementById("birinciCikart").value
+            let ikinciSayi = document.getElementById("ikinciCikart").value
+            
+            document.getElementById("sonuc2").innerHTML = Cikart(birinciSayi, ikinciSayi)
+        }
+
+        function Carpim() {
+            let birinciSayi = document.getElementById("birinciCarpim").value
+            let ikinciSayi = document.getElementById("ikinciCarpim").value
+            
+            document.getElementById("sonuc3").innerHTML = Carp(birinciSayi, ikinciSayi)
+        }
+
+        function Bolum() {
+            let birinciSayi = document.getElementById("birinciBolme").value
+            let ikinciSayi = document.getElementById("ikinciBolme").value
+            
+            document.getElementById("sonuc4").innerHTML = Bol(birinciSayi, ikinciSayi)
+        }
+    </script>
+</body>
+</html>
