@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Layout </title>
+        <!-- <link rel="stylesheet" href="style.css"></link> -->
+        <style>
+            .container {
+                width: 100%;
+            }
+
+            .container > div,
+            .container > .wrapper > div,
+            .container > .wrapper > .wrapper_sub > div {
+                border: 1px solid #000;
+            }
+
+            .header {
+                height: 75px;
+            }
+
+            .left {
+                width: 250px;
+                height: 500;
+            }
+
+            .ads {
+                height: 125px;
+            }
+
+            .main {
+                height: 300px;
+            }
+
+            .footer {
+                height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                Header
+            </div>
+            <div class="wrapper">
+                <div class="left">
+                    Left
+                </div>
+                <div class="wrapper_sub">
+                    <div class="ads">
+                        Ads
+                    </div>
+                    <div class="main">
+                        Main
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                Footer
+            </div>
+        </div>
+    </body>
+</html>

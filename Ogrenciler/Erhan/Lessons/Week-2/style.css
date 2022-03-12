@@ -1,0 +1,98 @@
+/* * {
+    color: black !important;
+} */
+
+p {
+    color: black;
+    background-color: grey;
+    /* margin: 5px; */
+    /* padding: 5px; */
+    /* top,right,bottom,left */
+    /* padding: 5px 5px 5px 5px; */
+    
+    padding-left: 5px;
+    margin-left: 15px;
+    width: 50%;
+    height: 125px;
+    
+    border: 1px solid red; /* top,right,bottom,left */
+    border-left: 3px solid red; /* Sol Kalınlık */
+    border-bottom: 3px solid red;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    color: red;
+    border: 1px solid black;
+}
+
+.yanMenu {
+    width: 250px;
+    height: 500px;
+}
+
+.yanMenu.aciklama {
+    color: green;
+}
+
+.reklamAlani {
+    width: 500px;
+    height: 125px;
+}
+
+.govde {
+    width: 500px;
+    height: 500px;
+}
+
+.footer {
+    height: 50px;
+}
+
+th {
+    padding: 5px;
+    text-align: left;
+}
+
+/* Önek İçeren */
+/* a[href^="http"] {
+    font-size: 10px;
+} */
+
+/* Eşit Olan */
+/* a[href="http"] {
+    font-size: 15px;
+} */
+
+/* Sonek İçeren */
+/* a[href$=".com"] {
+    font-size: 12px;
+} */
+
+.category_woman:active {
+    color: green;
+    font-size: 16px;
+}
+
+a[class^="category_"]:hover {
+    color: red;
+    font-size: 22px;
+}
+
+.footer span::before {
+    padding-right: 5px;
+    content: "-";
+}
+
+.footer span::after {
+    padding-left: 5px;
+    content: ">";
+}
+
+.govde > a {
+    text-decoration: none;
+    color: black;
+}

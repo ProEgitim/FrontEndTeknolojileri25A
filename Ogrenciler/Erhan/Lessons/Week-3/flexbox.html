@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Örnekleri</title>
+    <style>
+        #main {
+            margin: auto;
+            /* width: 1200px; */
+            width: 80%;
+            padding: 5px;
+            border: 1px solid red;
+        }
+
+        /* E.g. Tablet */
+        @media screen and (max-width: 1024px) {
+            #main {
+                width: 90%;
+            }
+        }
+
+        /* E.g. Mobile */
+        @media screen and (max-width: 600px) {
+            #main {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /* E.g. 2 diff */
+        @media screen and (min-width: 600px) and (max-width: 800px) {
+            #main {
+                width: 95%;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+            /* ToDo: gap ve margin boşlukları incelenecek. */
+            /* gap: 10px; */
+        }
+
+        .container div {
+            width: calc(33.33% - 2px - 20px - 10px);
+            height: 200px;
+            border: 1px solid #000;
+            margin: 10px; /* sol - 10px, sağ - 10px */
+            padding: 5px;
+        }
+
+        /* ToDo Bağlaç .container div deki bağlaç kullanılacak */
+        .container span {
+            border: 1px solid #000;
+            width: calc(33.33% - 2px - 40px - 10px);
+            height: 200px;
+            margin: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            <!-- Sadece 1 Kutuyu Ele almamız istenecek -->
+            <div> 1. Kutu </div>
+            <div> 2. Kutu </div>
+            <div> 3. Kutu </div>
+            <div> 4. Kutu </div>
+            <!-- <span> 5. Kutu </span> -->
+            <div> 5. Kutu </div>
+            <div> 6. Kutu </div>
+            <div> 7. Kutu </div>
+            <div> 8. Kutu </div>
+            <div> 9. Kutu </div>
+            <div> 10. Kutu </div>
+            <div> 11. Kutu </div>
+            <div> 12. Kutu </div>
+        </div>
+    </div>
+</body>
+</html>
