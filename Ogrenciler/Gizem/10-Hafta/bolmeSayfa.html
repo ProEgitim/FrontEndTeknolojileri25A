@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bölme Ekranı</title>
+</head>
+<body>
+    <div id="sonuc"></div>
+    <input id="bolBirinci" type="text">
+    <input id="bolIkinci" type="text">
+    <button onclick="butonaTikla()"> Bölme Yap </button>
+    
+    <script src="src/js/bol.js"></script>
+    <script>
+        function butonaTikla(birinciSayi, ikinciSayi) {
+            bolBirinci = document.getElementById("bolBirinci").value;
+            bolIkinci = document.getElementById("bolIkinci").value;
+            document.getElementById("sonuc").innerHTML = Carp(bolBirinci, bolIkinci);
+        }
+    </script>
+</body>
+</html>
