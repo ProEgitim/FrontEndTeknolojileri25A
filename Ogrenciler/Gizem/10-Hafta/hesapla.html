@@ -11,25 +11,33 @@
 <body>
     HESAPLAMA
 
+    
     <div id="topla">
         <input id="toplaBirinci" type="text">
         <input id="toplaIkinci" type="text">
-        <button onclick="Topla()"> TOPLA </button>
+        <button onclick="butonaTiklaTopla()"> TOPLA </button>
+        <div id="sonucTopla"></div>
     </div>
+    <br />
     <div id="cikart">
         <input id="cikartBirinci" type="text">
         <input id="cikartIkinci" type="text">
-        <button onclick="Cikart()"> Çıkart </button>
+        <button onclick="butonaTiklaCikart()"> Çıkart </button>
+        <div id="sonucCikart"></div>
     </div>
+    <br />
     <div id="carp">
         <input id="carpBirinci" type="text">
         <input id="carpIkinci" type="text">
-        <button onclick="Carp()"> Carp </button>
+        <button onclick="butonaTiklaCarp()"> Carp </button>
+        <div id="sonucCarp"></div>
     </div>
+    <br />
     <div id="bol">
         <input id="bolBirinci" type="text">
         <input id="bolIkinci" type="text">
-        <button onclick="Bol()"> Bol </button>
+        <button onclick="butonaTiklaBol()"> Bol </button>
+        <div id="sonucBol"></div>
     </div>
     <br />
 
@@ -37,33 +45,39 @@
     <script>
         toplaBirinci = document.getElementById("toplaBirinci").value;
         toplaIkinci = document.getElementById("toplaIkinci").value;
-        document.getElementById("topla").innerHTML = Topla(toplaBirinci, toplaIkinci);
 
-        function butonaTikla(toplaBirinci, toplaIkinci) {
-            document.getElementById("topla").innerHTML = Topla(toplaBirinci, toplaIkinci)
+        
+        function butonaTiklaTopla(toplaBirinci, toplaIkinci) {
+            document.getElementById("sonucTopla").innerHTML = Topla(toplaBirinci, toplaIkinci)
         }
     </script>
     <script src="src/js/cikart.js"></script>
     <script>
-        cikartBirinci = document.getElementById("toplaBirinci").value;
-        cikartIkinci = document.getElementById("toplaIkinci").value;
-        document.getElementById("cikart").innerHTML = Cikart(cikartBirinci, cikartIkinci);
+        cikartBirinci = document.getElementById("cikartBirinci").value;
+        cikartIkinci = document.getElementById("cikartIkinci").value;
 
-        function butonaTikla(toplaBirinci, toplaIkinci) {
-            document.getElementById("cikart").innerHTML = Cikart(cikartBirinci, cikartIkinci)
+        function butonaTiklaCikart(toplaBirinci, toplaIkinci) {
+            document.getElementById("sonucCikart").innerHTML = Cikart(cikartBirinci, cikartIkinci)
         }
     </script>
     <script src="src/js/carp.js"></script>
     <script>
         carpBirinci = document.getElementById("carpBirinci").value;
         carpIkinci = document.getElementById("carpIkinci").value;
-        document.getElementById("carp").innerHTML = Carp(carpBirinci, carpIkinci);
 
-        function butonaTikla(carpBirinci, carpIkinci) {
-            document.getElementById("carp").innerHTML = Carp(carpBirinci, carpIkinci)
+        function butonaTiklaCarp(carpBirinci, carpIkinci) {
+            document.getElementById("sonucCarp").innerHTML = Carp(carpBirinci, carpIkinci)
         }
     </script>
+    <script src="src/js/bol.js"></script>
+    <script>
+        bolBirinci = document.getElementById("carpBirinci").value;
+        bolIkinci = document.getElementById("carpIkinci").value;
 
+        function butonaTiklaBol(carpBirinci, carpIkinci) {
+            document.getElementById("sonucBol").innerHTML = Bol(carpBirinci, carpIkinci)
+        }
+    </script>
 </body>
 
 </html>
