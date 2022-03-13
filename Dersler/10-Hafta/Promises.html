@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises (Söz)</title>
+</head>
+<body>
+    
+    <script>
+        // React ile örneklendirme yapılacak
+        let promise = new Promise(function(resolve, reject) {
+            let siraNumarasi = 400
+
+            // sözü aldık
+            if (siraNumarasi == 400) {
+                resolve("Tamam, Sıra bende")
+            }
+            // söz alamadık
+            else {
+                reject("Hata")
+            }
+        })
+
+        promise.then(function(deger) {Sonuc(deger)}, function(hata) {})
+        // promise.then(function(deger) {Sonuc(deger)}, function(hata) {})
+        // promise.then(function(deger) {Sonuc(deger)}, function(hata) {})
+
+        // function ToplamaIslemi(birinciSayi, ikinciSayi) {
+        //     return birinciSayi + ikinciSayi
+        // }
+
+        // Fonksiyonel olarak bir örnek -- Kıyaslama için
+        function Hesapla(birinciSayi, ikinciSayi) {
+            let topla = birinciSayi + ikinciSayi
+            let cikar = birinciSayi - ikinciSayi
+            let carp = birinciSayi * ikinciSayi
+            let bol = birinciSayi * ikinciSayi
+
+            Sonuc(topla)
+            Sonuc(cikar)
+            Sonuc(carp)
+            Sonuc(bol)
+        }
+
+        function Sonuc(value) {
+            if(value == "undefined" || value == null || value == "") {
+                alert("Herhangi bir değer girilmedi")
+            }
+
+            return value
+        }
+
+        //ToplamaIslemi(4, 5)
+    </script>
+</body>
+</html>

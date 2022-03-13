@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    
+    <script>
+        // AJAX için kullanılacak nesne
+        var xhr = new XMLHttpRequest()
+
+        // GET-POST belirlenir ve alınacak olan veri için url tanımlanır.
+        xhr.open('GET', 'url')
+
+        xhr.onreadystatechange = function() {
+            // readyState = 0 ise açıldığını (Örn: xhr.open('GET', 'url') tanımlandı ise)
+            // readyState = 1 ise istek gönderildiğinde (Örn: Veri iletişimi sağlanamadığında (Network Problemi) false döner)
+            // readyState = 2 ise alındığında (response) (Örn: Kullanıcı verisi geldiğinde true)
+            // readyState = 3 ise yüklendiğinde (readyState 2 olduğunda ve işlem kapatıldığında true, diğer durumda false)
+            // readyState = 4 ise tamamlandığında (Örn: Tüm çıktıyı tamamlaması)
+
+            // HTTP durum kodlarını bir sonraki derste açalım (200,300,404,405,500,501 v.s.)
+            // this.state -- HTTP durum kodlarını barındırır
+            // this.state = 200 -- Başarılı
+            if (this.readyState == 4 && this.status == 200) {
+                // yapılacak işlemler
+            }
+        }
+    </script>
+
+    <script>
+        var xhr = new XMLHttpRequest()
+        
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1')
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.response)
+            }
+        }
+        // isteği tamamla
+        xhr.send()
+    </script>
+</body>
+</html>

@@ -24,19 +24,24 @@
             let buton = document.getElementById("button");
             let left =  Math.floor(Math.random() * 100);
             let top =  Math.floor(Math.random() * 100);
+
+            //Tıklayamasın durumu için reverse işlemi -- Ters işlem
+            //Butonun kendi genişliği ve yüksekliği kullanılacak
+            //onmouseout bakılacak
+            let right = Math.floor(Math.random() * 100);
+            let bottom = Math.floor(Math.random() * 100);
+
             let renk = Math.floor(Math.random() * 16777215).toString(16);
             buton.style.background = "#"+renk;
-        
-            if(buton.style.left != (left +"px") &&  buton.style.top != (top+"px"))
+            
+            if(buton.style.left != (left +"px") && buton.style.top != (top+"px"))
             {
                 buton.style.left = left + "px";
                 buton.style.top = top + "px";
             }
             else{
-                degisleft = left + 10;
-                degistop = top + 10;
-                buton.style.left = degisleft + "px";
-                buton.style.top = degistop + "px";
+                buton.style.left = right + "px";
+                buton.style.top = bottom + "px";
             }
         }
     </script>
