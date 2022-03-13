@@ -34,7 +34,7 @@
     <script>
         var xhr = new XMLHttpRequest()
         
-        xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1')
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 console.log(this.response)
