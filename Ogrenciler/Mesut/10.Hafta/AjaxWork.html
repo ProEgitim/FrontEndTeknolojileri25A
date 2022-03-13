@@ -40,6 +40,7 @@
 
     <script>
         var xhr = new XMLHttpRequest()
+        var a = ""
 
         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
         xhr.responseType = "json";
@@ -47,24 +48,22 @@
             if (this.readyState == 4 && this.status == 200) {
                 // var dizi = this.response;
                 // console.log(this.response);
-                console.log(this.response)
+                //console.log(this.response)
 
-                var a="";
-                for (i = 0; i < this.response.length; i++) {
-                    
-                    a += " <div class='card'> " +
-                        "<img src = '...' class='card-img-top' alt = '...' >" +
-                        "<div class='card-body'>" +
-                        "<h5 class='card-title'>" + this.response[i].name + "</h5>" +
-                        "<p class='card-text'>" + this.response[i].username  + "</p>" +
-                        "<p class='card-text'><small class='text-muted'>" +this.response[i].email+ "-" +this.response[i].phone +"</small></p>" +
-                        " </div>" +
-                        "</div >"
-
+                for (i = 0; i < this.response.length; i++) {                    
+                    a +="<div class='card'>" +
+                            "<img src = '...' class='card-img-top' alt = '...' >" +
+                            "<div class='card-body'>" +
+                                "<h5 class='card-title'>" + this.response[i].name + "</h5>" +
+                                "<p class='card-text'>" + this.response[i].username  + "</p>" +
+                                "<p class='card-text'><small class='text-muted'>" +this.response[i].email+ "-" +this.response[i].phone +"</small></p>" +
+                                "</div>" +
+                            "</div >"
                         //console.log(a);
+                        //document.getElementById("Result").innerHTML += a;
                 } 
 
-                 document.getElementById("Result").innerHTML=a;
+                 document.getElementById("Result").innerHTML = a;
             }
         }
         // isteği tamamla

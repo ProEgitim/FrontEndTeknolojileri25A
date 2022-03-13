@@ -9,34 +9,30 @@
 </head>
 <body>
     <div class="container mt-5 d-flex flex-wrap">
-        <div class="row" id="items">
-
-
-        </div>
-
+        <div class="row" id="items"></div>
     </div>
     <script>
-         var array=[]
+        var array = [] // Zorunlu değil, kullanılabilir.
         var xhr = new XMLHttpRequest()
-        
+
         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
-        xhr.responseType = "json"
+        xhr.responseType = 'json' // Dönüş tipi
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                array=this.response
-                array.map(x=>{
-document.getElementById("items").innerHTML+=
-'<div class="card" style="width: 18rem;">'+
- ' <div class="card-body">'+
-  '  <h5 class="card-title">'+x.name+'</h5>'+
-'    <h6 class="card-subtitle mb-2 text-muted">'+x.username+'</h6>'+
-  '  <p class="card-text">'+x.email+'</p>'+
-  '  <a href="#" class="card-link">Card link</a>'+
-  '  <a href="#" class="card-link">Another link</a>'+
-'  </div>'+
-'</div>'
+                array = this.response
 
-
+                //this.respone.map(x=>{..işlemler})
+                array.map(x=> {
+                    document.getElementById("items").innerHTML +=
+                        '<div class="card" style="width: 18rem;">'+
+                            '<div class="card-body">'+
+                                '<h5 class="card-title">'+x.name+'</h5>'+
+                                '<h6 class="card-subtitle mb-2 text-muted">'+x.username+'</h6>'+
+                                '<p class="card-text">'+x.email+'</p>'+
+                                '<a href="#" class="card-link">Card link</a>'+
+                                '<a href="#" class="card-link">Another link</a>'+
+                            '</div>'+
+                        '</div>'
                 })
             }
         }

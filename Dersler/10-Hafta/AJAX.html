@@ -32,9 +32,40 @@
     </script>
 
     <script>
+        // readyState = 0 için örnek
+        var xhr = new XMLHttpRequest()
+        
+        //xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+        xhr.responseType = 'json' // varsayılan text
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 0 && this.status == 200) {
+                console.log("Bağlantı kurulamadı.")
+            }
+        }
+        // isteği tamamla
+        xhr.send()
+    </script>
+
+    <script>
+        // readyState = 1 için örnek
+        var xhr = new XMLHttpRequest()
+        
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/usersGetir')
+        xhr.responseType = 'json' // varsayılan text
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 1 && this.status == 200) {
+                console.log("Veriler getirilirken bir hata meydana geldi.")
+            }
+        }
+        // isteği tamamla
+        xhr.send()
+    </script>
+
+    <script>
         var xhr = new XMLHttpRequest()
         
         xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+        xhr.responseType = 'json' // varsayılan text
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 console.log(this.response)
@@ -42,6 +73,9 @@
         }
         // isteği tamamla
         xhr.send()
+
+        //xhr.readyState = 1 -- Yanlış (Ready-Only)
+        //xhr.response = 'Veri' -- Yanlış (Ready-Only)
     </script>
 </body>
 </html>
