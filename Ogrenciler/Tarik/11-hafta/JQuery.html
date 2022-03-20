@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="photosList">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="row"></div>
+            <div class="row"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+         var photos = new XMLHttpRequest()
+         var photosArray=[];
+         var usersArray=[];
+         var todosArray=[];
+        
+        photos.open('GET', 'https://jsonplaceholder.typicode.com/photos')
+        photos.responseType = 'json' // varsayılan text
+        photos.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                for(let i=0;i<16;i++){
+                    photosArray.push(this.response[i]);
+                }
+            }
+        }
+        photos.send()
+        var users = new XMLHttpRequest()
+        
+        users.open('GET', 'https://jsonplaceholder.typicode.com/users')
+        users.responseType = 'json' // varsayılan text
+        users.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                    usersArray.push(this.response);
+            }
+        }
+        users.send()
+        var todos = new XMLHttpRequest()
+        
+        todos.open('GET', 'https://jsonplaceholder.typicode.com/todos')
+        todos.responseType = 'json' // varsayılan text
+        todos.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                    todosArray.push(this.response);
+                
+            }
+        }
+        todos.send()
+
+        $(document).ready(function() {
+           photosArray.map(x=>{
+            $(".photosList").append(`<div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="${x.thumbnailUrl}" alt="${x.title}">
+                    <div class="card-body">
+                      <h5 class="card-title">${x.title}</h5>
+                    </div>
+                  </div>`)
+           })
+        })
+    </script>
+</body>
+</html>
