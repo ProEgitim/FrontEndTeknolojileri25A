@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çıkartma Ekranı</title>
+    <link rel="stylesheet" href="src/css/pages.css">
+</head>
+<body>
+    <input type="text" id="birinciSayi" />
+    <input type="text" id="ikinciSayi" />
+    <button onclick="butonaTikla()"> Çıkart </button>
+
+    <div id="sonuc"></div>
+
+    <script src="src/js/cikart.js"></script>
+    <script>
+        // document.getElementById("sonuc").innerHTML = Topla(3, 4)
+
+        function butonaTikla() {
+            let birinciSayi = document.getElementById("birinciSayi").value
+            let ikinciSayi = document.getElementById("ikinciSayi").value
+            
+            document.getElementById("sonuc").innerHTML = Cikart(birinciSayi, ikinciSayi)
+        }
+    </script>
+</body>
+</html>

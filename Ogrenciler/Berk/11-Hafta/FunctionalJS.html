@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonksiyonel Javascript</title>
+</head>
+<body>
+    
+    <script>
+        //document.write -- HTML kaynak koduna ilgili işlemleri aktarır.
+        // var messageBox = document.write('mesaj alındı');
+
+        //var messageBox = console.log('mesaj alındı')
+        
+        // function printMessage(message, control) {
+        //     //işlemler
+        //     if (control == -1) {
+        //         console.log(message)
+        //     } else {
+        //         alert(message)
+        //     }
+        // }
+
+        // printMessage('mesaj alındı', -1) //console a yaz
+        // printMessage('mesaj alındı') //alert penceresi aç
+       
+        //--
+
+        // var messageLog = function printMessage(message, control) {
+        //     //işlemler
+        //     if (control == -1) {
+        //         console.log(message)
+        //     } else {
+        //         alert(message)
+        //     }
+        // }
+
+        // messageLog('Mesaj Alındı', -1)
+
+        // Arrow Function
+        // const messageLog = message => console.log(message)
+        
+        // Fonksiyon örneği
+        // const messageLog = (message, control) => {
+        //     if (control == -1) {
+        //         console.log(message)
+        //     } else {
+        //         alert(message)
+        //     }
+        // }
+
+        // Short-hand yapısı
+        // kontrol ? eğer : değilse
+
+        // Short-hand if örneği
+        // const messageLog = (message, control) => control == -1 ? console.log(message) : null
+        // messageLog('Mesaj Alındı')
+
+        // Short-hand if-else örneği
+        // const messageLog = (message, control) => control == -1 ? console.log(message) : alert(message)
+        // messageLog('Mesaj Alındı')
+
+        //var x = 11
+        //x == 10 ?? 'sayı 10 değil'
+        
+        // Short-hand if-else-if örneği
+        // const messageLog = (message, control) => control == -1 ? console.log(message) : control == -2 ? alert(message) : null
+        // messageLog('Mesaj Alındı')
+        
+        // Dizi
+        //var data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        
+        // Dizi ve Nesne
+        // const data = [
+        // {
+        //     id: 1,
+        //     fullName: 'Tarık Yeşilçimen'
+        // },
+        // {
+        //     id: 2,
+        //     fullName: 'Mesut Gülsoy'
+        // },
+        // {
+        //     id: 3,
+        //     fullName: 'Gizem Sayar'
+        // },
+        // {
+        //     id: 4,
+        //     fullName: 'Ümmügülsüm Genç'
+        // },
+        // {
+        //     id: 5,
+        //     fullName: 'Erhan Öztürk'
+        // },
+        // {
+        //     id: 6,
+        //     fullName: 'Ayşenur Aygün'
+        // }]
+
+        //const message = ["birinci mesajımız", message => console.log(message), "ikinci mesajımız", message => console.log(message)]
+        //message[1](message[0]) // birinci mesajımız
+        //message[3](message[2]) // ikinci mesajımız
+
+        // const message = ["birinci mesajımız", "ikinci mesajımız", message => console.log(message)]
+        //message[2](message[0] + " " + message [1]) // birinci mesajımız ikinci mesajımız
+        //message[2]('veri') // veri
+    </script>
+</body>
+</html>
