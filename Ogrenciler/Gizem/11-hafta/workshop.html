@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="items"></div>
+        <div class="row" id="selected" >
+            <select name="users" id="users" onchange="BilgiGetir()" >
+                <option value="0">Seçiniz</option>
+            </select>
+        </div>
+        <div class="row" id="eslesme"></div>
+    </div>
+   <script>
+       
+       var users = new XMLHttpRequest()
+
+        users.open('GET', 'https://jsonplaceholder.typicode.com/users')
+        users.responseType = 'json' // varsayılan text
+        users.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                array = this.response
+                 array.map(x => {
+                    document.getElementById("users").innerHTML +=
+                        '<option value="'+x.id+'">'+ x.name +'</option>'
+                })
+            }
+        }
+        users.send()
+        
+        // fotoğraflar
+        var array = [];
+        var photos = new XMLHttpRequest()
+
+            photos.open('GET', 'https://jsonplaceholder.typicode.com/photos')
+            photos.responseType = 'json' // varsayılan text
+            photos.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                      //array = this.response
+
+                    //this.respone.map(x=>{..işlemler})
+                    /*array.map(x => {
+                        document.getElementById("items").innerHTML +=
+                            '<div class="card" style="width: 18rem;">' +
+                            '<div class="card-body">' +
+                            '<h5 class="card-title">' + x.title + '</h5>' +
+                            '<h6 class="card-subtitle mb-2 text-muted">' + x.url + '</h6>' +
+                            '<a href="#" class="card-link">Card link</a>' +
+                            '<a href="#" class="card-link">Another link</a>' +
+                            '</div>' +
+                            '</div>'
+                    })*/
+                    
+                    for (var i = 0; i <= 15; i++) {
+                        array.push(this.response[i]);
+                    }
+                    array.map(x => {
+                        document.getElementById("items").innerHTML +=
+                            '<div class="card" style="width: 18rem;">' +
+                            '<div class="card-body">' +
+                            "<img src = '"+ x.thumbnailUrl +"' class='card-img-top' alt = '...' >" +
+                            '<h5 class="card-title">' + x.title + '</h5>' +
+                            '<h6 class="card-subtitle mb-2 text-muted"> <a href = ' + x.url + ' target = _blank >buraya tıklayın </a> </h6>' +
+                            '</div>' +
+                            '</div>'
+                    })
+                    console.log(array);
+
+                }
+            }
+        photos.send()
+        //todos 
+        
+        function BilgiGetir() {
+            var todos = new XMLHttpRequest()
+
+            var array = [];
+                var user_id = document.getElementById("users").value;
+                //console.log(user_id);
+                todos.open('GET', 'https://jsonplaceholder.typicode.com/users/'+user_id+'/todos')
+                todos.responseType = 'json' // varsayılan text
+                todos.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        array = this.response;
+                         array.map(x => {
+                             console.log(typeof x.completed);
+                             if(x.completed)
+                                 userStyle = 'color:green'
+                             else
+                                userStyle = 'color:blue'
+                             document.getElementById("eslesme").innerHTML +=
+                                 '<div class= "row" style= "' + userStyle +'" >' + x.title + '</div>'
+                        })
+                    }
+
+                   
+                }
+            todos.send()
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+</body>
+</html>
