@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modül ve NPM</title>
+</head>
+<body>
+    <div id="Mesaj"></div>
+    <div id="Topla"></div>
+    <div id="Cikar"></div>
+    <div id="Carp"></div>
+    <div id="Bol"></div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
+
+<!--
+    // Kurulum için nodejs.org tan yükleme yapınız..
+
+    npm -v // NPM Versiyon
+    node -v // NODE Versiyon
+
+    // Package.json oluşturma
+    npm init
+    // Package.json hazır kurulum
+    npm init -y
+
+    // Paket Yükleme
+    npm install || npm i
+    npm install <paketAdi> // npm i react-native
+    npm install <paketAdi> <paketAdi> <paketAdi> // npm i react react-native redux
+    npm install <paketAdi> --save // npm i react-native@0.63
+    npm install <paketAdi>@<versiyon> // npm i react-native@0.63
+
+    // Globale paket yükleme
+    npm install || npm i
+    npm install -g <paketAdi> // npm i react-native
+
+    // Paket Güncelleme
+    npm uninstall
+    npm uninstall <paketAdi> // npm uninstall react-native
+
+    // Globale paket silme
+    npm uninstall
+    npm uninstall -g <paketAdi> // npm uninstall react-native
+
+    // Kurulu modülleri listele
+    npm ls || npm list
+
+    // Root a kurulu olan (Local) paketlerin listesi
+    npm root -g
+
+    // Versiyonu geçmiş olan paketlerin listesi
+    npm outdated
+
+    // Paketin versiyonunu güncellemek için
+    npm update <paketAdi>
+-->
