@@ -1,0 +1,31 @@
+npm i -g create-react-app yerine
+npx create-react-app first-app kullanabiliriz.
+
+cd first-app ile oluşturulan projeye gidiyoruz.
+npm start komutu ile projeyi başlatalım.
+
+Kurmuş olduğumuz projeyi inceleyelim :
+
+index.html nedir ? ne yapar ?
+
+App.js nedir ?
+
+index.js nedir ?
+ReactDOM nedir ? Bunun için DOM nedir bilmemiz gerekir.
+DOM nedir ?
+Görselde bulunan <head>, <body>, <h1>, <img> gibi etiketler birer DOM nesneleridir.
+DOM sayesinde haberleşme sağlanarak etkileşimli web siteler yapılabilmesini sağlanır.
+
+ReactDOM.render() 2 parametre alır, 1. si render edilecek olan, 2. si nereye render edileceği.
+document.getElementById('root') nedir ?
+
+css ler nerede ?
+css ler nasıl kullanılır ?
+
+import kullanımı,
+export ve export default kullanımları,
+
+bileşen kullanımları :
+app yerine fonksiyon ve sabit oluşturma
+bileşen oluşturma
+bileşen içinde bileşen oluşturma
