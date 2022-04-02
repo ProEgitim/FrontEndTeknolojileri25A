@@ -47,7 +47,7 @@ h4::before {
     /* position- absolute: katman bağımsız konumlan, relative: katmana bağlı olarak konumunu koru */
     /* position: absolute; */
     display: inline-block;
-    background-image: url('../images/logo.png');
+    background-image: url('../components/logo.png');
     background-size: cover;
     width: 5px;
     height: 20px;
