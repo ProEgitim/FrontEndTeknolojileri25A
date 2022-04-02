@@ -39,6 +39,7 @@
 
 header {
   display: flex;
+  /* flexDirection : row; */
   flex-direction: row;
   align-items: center;
   /* height: 6vh; */

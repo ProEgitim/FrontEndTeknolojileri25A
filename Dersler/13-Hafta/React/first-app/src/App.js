@@ -1,9 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 
+{/* <style>
+  .myAppStyle {
+    background-color: 'red',;
+    font-size: 10px;
+    font-weight: 'bold';
+    width: 100%
+  }
+</style> */}
+
+const myAppStyle = {
+  backgroundColor : 'red',
+  fontSize: 10,
+  fontWeight: 'bold',
+  width: '100%'
+}
+
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={myAppStyle}>
       <header>
         <img src="logo.png" />
         <a href="index.html">Home Page</a>
