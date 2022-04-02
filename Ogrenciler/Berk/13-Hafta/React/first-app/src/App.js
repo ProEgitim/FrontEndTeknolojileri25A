@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src="src/assets/images/logo.png"></img>
+        <img src="logo.png" />
         <a href="index.html">Home Page</a>
         <a href="movies.html">Movies</a>
         <a href="watch.html">Watch</a>

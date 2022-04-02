@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('header'));
+ReactDOM.render(<Header />,document.getElementById('header'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('menu'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('main'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('footer'));

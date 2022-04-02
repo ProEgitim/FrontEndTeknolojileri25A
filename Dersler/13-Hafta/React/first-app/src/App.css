@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* height: 6vh; */
+  height: 50px;
+  padding-left: 2rem;
+  background-color: #323232;
+  color: #e0e0e0;
+  font-size: 1.25rem;
+}
+
+header img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header a {
+  color: #e0e0e0;
+  font-size: 1rem;
+  text-decoration: none;
+  /* margin : top right bottom left */
+  /* margin: 0 10px 0 10px; */
+  /* margin: topbottom rightleft */
+  margin: 0 10px;
+}
+
+header a:hover {
+  color: #777777;
+  font-size: 1rem;
+}
