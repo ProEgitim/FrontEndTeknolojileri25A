@@ -1,4 +1,5 @@
-npm i -g create-react-app yerine
+npm i -g create-react-app first-app yerine
+npm install -g create-react-app first-app
 npx create-react-app first-app kullanabiliriz.
 
 cd first-app ile oluşturulan projeye gidiyoruz.
