@@ -2,15 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Header from './Components/header';
-import Slider from './Components/slider';
+import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
-import * as ReactDOMClient from 'react-dom/client';
 
-const root = ReactDOMClient.createRoot(document.getElementById('header'));
-
-root.render(<App />);
-
+ReactDOM.render(<Header />,document.getElementById('header'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('menu'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('main'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('footer'));

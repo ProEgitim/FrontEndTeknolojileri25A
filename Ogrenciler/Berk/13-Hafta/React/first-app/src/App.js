@@ -1,17 +1,14 @@
-import logo from './logo.svg';
+import logo from "./Components/logo.png"
 import './App.css';
+import Header from "./Components/header";
+import Slider from "./Components/slider";
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <img src="logo.png" />
-        <a href="index.html">Home Page</a>
-        <a href="movies.html">Movies</a>
-        <a href="watch.html">Watch</a>
-        <a href="contact.html">Contact Page</a>
-    </header>
-    </div>
+    <>
+    <Header />
+    <Slider />
+    </>
   );
 }
 

@@ -1,0 +1,80 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* height: 6vh; */
+    height: 50px;
+    padding-left: 2rem;
+    background-color: #323232;
+    color: #e0e0e0;
+    font-size: 1.25rem;
+}
+
+header img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header a {
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-decoration: none;
+    /* margin : top right bottom left */
+    /* margin: 0 10px 0 10px; */
+    /* margin: topbottom rightleft */
+    margin: 0 10px;
+}
+
+header a:hover {
+    color: #777777;
+    font-size: 1rem;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    color: #f4f4f4;
+    font-size: 20px;
+}
+
+h4::before {
+    content: '';
+    /* position- absolute: katman bağımsız konumlan, relative: katmana bağlı olarak konumunu koru */
+    /* position: absolute; */
+    display: inline-block;
+    background-image: url('../components/logo.png');
+    background-size: cover;
+    width: 5px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+h4::after {
+    content: '>';
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+h4:hover {
+    color: #f5c518;
+    cursor: pointer;
+}
+
+title {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.card .card-body a {
+    width: 100%;
+}
+
+.card .card-body a:hover {
+    background-color: #000;
+    border-color: #000 !important;
+}
