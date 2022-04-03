@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client';
 import './index.css'
 //const App = require('./App') - farklı bir kullanım
 //import { App } from './App'
@@ -7,7 +8,20 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 {/* <img alt="logo" /> */}
-ReactDOM.render(<App />, document.getElementById('header'))
+
+const root = createRoot(document.getElementById('root'));
+
+const student = {
+    name: 'Ayşe'
+}
+
+const cars = {
+    name: 'Volvo',
+    model: 2016
+}
+
+// root.render(<App />)
+root.render(<App studentName={student.name} carModel={cars.model} />)
 
 // Birden çok render edilme durumu
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('menu'))

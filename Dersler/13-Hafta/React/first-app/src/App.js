@@ -1,7 +1,10 @@
 import logo from './logo.svg';
+import PropTypes from 'prop-types'
 import './App.css';
 
-{/* <style>
+{/* 
+Aşağıdaki const myAppStyle ile arasındaki fark
+<style>
   .myAppStyle {
     background-color: 'red',;
     font-size: 10px;
@@ -17,7 +20,9 @@ const myAppStyle = {
   width: '100%'
 }
 
-function App() {
+const App = props => {
+  // console.log(props)
+
   return (
     <div className="App" style={myAppStyle}>
       <header>
@@ -27,8 +32,22 @@ function App() {
         <a href="watch.html">Watch</a>
         <a href="contact.html">Contact Page</a>
     </header>
+      <div className='navbar'>
+        <span> Öğrenci Adı: {props.studentName} </span>
+        <span> Araç Model Yılı: {props.carModel} </span>
+      </div>
     </div>
   );
+}
+
+App.propTypes = {
+  studentName: PropTypes.string,
+  carModel: PropTypes.number
+}
+
+App.defaultProps = {
+  studentName: 'Ad',
+  carModel: 2022
 }
 
 export default App;
