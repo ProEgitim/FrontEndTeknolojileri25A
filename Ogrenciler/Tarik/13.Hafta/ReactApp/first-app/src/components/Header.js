@@ -1,5 +1,6 @@
 import "../styles/styles.css"
 import logo from "./logo.png"
+import PropTypes from 'prop-types'
 
 let user = {
     message: null,
@@ -7,17 +8,19 @@ let user = {
 }
 
 const _onPress = () => {
-    user.message = 'Hoşgeldin'
-    user.name = 'Tarık'
+        user.message = 'Hoşgeldin'
+        user.name = 'Tarık'
+        console.log('Giris yapildiktan sonraki durum ',user)
 }
 
 const Login = props => {
     return (
-        <a onClick={_onPress} href="#">Giris Yap</a>
+        <button onClick={_onPress}>Giris Yap</button>
     )
 }
 
 const header = props => {
+    console.log('Giris yapilmadan onceki durum ',user)
     return (
         <>
         <header>
