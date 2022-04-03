@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Header from './components/Header';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(<Header />,document.getElementById('header'));
+const root = createRoot(document.getElementById('header'));
+
+const user = {
+    name:'Tarik'
+}
+root.render(<Header user={user.name}  />)
+// ReactDOM.render(<Header />,document.getElementById('header'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('menu'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('main'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('footer'));
