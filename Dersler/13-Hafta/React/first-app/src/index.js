@@ -24,8 +24,12 @@ const cars = {
 root.render(<App studentName={student.name} carModel={cars.model} />)
 
 // Birden çok render edilme durumu
-// ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('menu'))
-// ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('main'))
-// ReactDOM.render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('footer'))
+// -- //
+// const menu = createRoot(document.getElementById('menu'));
+// menu.render(<App1 />)
+// const main = createRoot(document.getElementById('main'));
+// main.render(<App2 />)
+// const footer = createRoot(document.getElementById('footer'));
+// footer.render(<App3 />)
 
 reportWebVitals()

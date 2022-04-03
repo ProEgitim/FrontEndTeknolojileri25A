@@ -8,10 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = createRoot(document.getElementById('header'));
 
-const user = {
-    name:'Tarik'
-}
-root.render(<Header user={user.name}  />)
+root.render(<Header helloMessage={null} userName={null} />)
 // ReactDOM.render(<Header />,document.getElementById('header'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('menu'));
 // ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('main'));

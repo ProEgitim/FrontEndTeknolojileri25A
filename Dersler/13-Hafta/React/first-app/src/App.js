@@ -22,6 +22,7 @@ const myAppStyle = {
 
 const App = props => {
   // console.log(props)
+  // props.studentName = 'Berk' **read-only
 
   return (
     <div className="App" style={myAppStyle}>
@@ -37,7 +38,7 @@ const App = props => {
         <span> Araç Model Yılı: {props.carModel} </span>
       </div>
     </div>
-  );
+  )
 }
 
 App.propTypes = {
