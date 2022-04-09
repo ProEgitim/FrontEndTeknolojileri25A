@@ -2,7 +2,7 @@ npm i -g create-react-app first-app yerine
 npm install -g create-react-app first-app
 npx create-react-app first-app kullanabiliriz.
 
-cd first-app ile oluşturulan projeye gidiyoruz.
+cd first-app ile oluşturulan projeye gidiyoruz. (Projenin kök dizini)
 npm start komutu ile projeyi başlatalım.
 
 Kurmuş olduğumuz projeyi inceleyelim :
