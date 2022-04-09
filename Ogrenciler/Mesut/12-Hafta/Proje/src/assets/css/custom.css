@@ -1,0 +1,10 @@
+/* Anasayfa Css leri */
+body {
+    font-family: 'Tahoma';
+}
+
+.movieList .row .card-body p {
+    height: 60px;
+}
+/* Hakkımızda Css leri */
+/* ... */
