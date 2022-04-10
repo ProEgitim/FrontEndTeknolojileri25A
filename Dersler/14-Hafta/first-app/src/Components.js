@@ -188,7 +188,8 @@ export class ClassProps extends Component {
         }
     }
     
-    onData() {
+    // onData() {}
+    onData = () => {
         return this.props.route
     }
 
@@ -214,4 +215,71 @@ export const FunctionalProps = props => {
             <h4> Sayfa Başlığı : {onData()} </h4>
         </div>
     )
+}
+
+// function OnClickButton () {}
+
+export class ClassOnClickButtons extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isHidden: false
+        }
+    }
+
+    toggleHidden = () => {
+        return this.setState({ isHidden: !this.state.isHidden })
+    }
+
+    buttonClickEvent = () => {
+        // <button onclick='...'> Button Text </button>
+        // <button onclick='onClickFunction()'>
+        return (<div> <button onClick={() => this.toggleHidden()}> Button Text </button> </div>)
+        
+    }
+
+    render() {
+        return ([
+            <div>
+                <div>{this.buttonClickEvent()}</div>
+            </div>,
+            this.state.isHidden ?
+            <div> Gizli Alan </div> : 
+            <div> Gizli Olmayan Alan </div>
+        ])
+    }
+}
+
+// adsoyad -- Camel Case (adSoyad)
+
+// export const toggleValue = val => {
+//     return val = !val
+// }
+
+export const FunctionalOnClickButtons = () => {
+    // data Api dan geldi (JSON)
+    // const veri = data.length ? data || [] : []
+    // const [state, setState] = useState({ isMaskedValue: false })
+
+    const [isHidden, setIsHidden] = useState(false)
+
+    //setIsMaskedValue(toggleValue(isMaskedValue))
+
+    const toggleHidden = () => {
+        return setIsHidden(!isHidden)
+    }
+
+    const buttonClickEvent = () => {
+        // <button onclick='...'> Button Text </button>
+        // <button onclick='onClickFunction()'>
+        return <button onClick={toggleHidden}> Button Text </button>
+    }
+
+    return ([
+        <div key={0}><div>{buttonClickEvent()}</div></div>,
+        isHidden ?
+        <div key={1}> Gizli Alan </div> : 
+        <div key={2}> Gizli Olmayan Alan </div>
+    ])
 }

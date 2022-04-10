@@ -5,6 +5,7 @@ import {
   ClassUser, FunctionalUser, 
   ClassUserWithLifeCycle, FunctionalUserWithLifeCycle,
   ClassProps, FunctionalProps,
+  ClassOnClickButtons, FunctionalOnClickButtons,
   Test, Message,
   Loading 
 } from './Components'
@@ -18,8 +19,11 @@ const App = () => {
   return (
     // console.log(data),
     loaded ?
+      // <div class="App"></div>
       <div className="App">
       <header className="App-header">
+        {/* Inline CSS kullanımı örneği */}
+        {/* <header style={{ width: 200, height: 100, backgroundColor: 'red' }}> */}
           {/* <UserInfo /> */}
           {/* <Message /> */}
           {/* <Test /> */}
@@ -28,7 +32,10 @@ const App = () => {
           {/* <ClassUserWithLifeCycle /> */}
           {/* <FunctionalProps route={routeName} /> */}
           {/* <ClassProps route={routeName} /> */}
-          <ClassProps />
+          {/* <ClassProps /> */}
+          {/* <ClassOnClickButtons /> */}
+          <FunctionalOnClickButtons />
+
         {/* <p> Anasayfa </p>
         <a
           className="App-link"
