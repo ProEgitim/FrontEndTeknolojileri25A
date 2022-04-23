@@ -5,6 +5,8 @@ const reducers = combineReducers({
     todoReducer
 })
 
-export default combineStore = () => {
+const combineStore = () => {
     return createStore(reducers)
 }
+
+export default combineStore

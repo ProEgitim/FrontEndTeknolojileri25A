@@ -2,5 +2,7 @@ npm --save i react-dom
 npm --save i react-router-dom
 npm i redux --save
 npm i react-redux --save
+//reactstrap component ını react ve react-dom component larına bağla (linkle)
+npm install reactstrap react react-dom 
 
 //npm --save i react-router-dom@latest
