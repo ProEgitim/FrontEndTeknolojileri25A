@@ -3,7 +3,6 @@ let varsayilanSayi = { sayi : 0 }
 // reducer (state, action, payload)
 
 export const reducer = (state = varsayilanSayi, action) => {
-    console.log(action.type)
     // Switch ile type kontrolü
     // switch(action.type) {
     //     case "SAYI_ARTTIR": return {

@@ -15,7 +15,7 @@ const List = props => {
                 props.filteredTodos.map((item, index) => {
                     return(
                         <>
-                            <ListGroupItem>
+                            <ListGroupItem key={`list-${index}`}>
                                 {item}
                                 <Button close key={`todos_${index}`} onClick={() => removeButtonClick(item)} style={{float: 'right'}} />
                             </ListGroupItem>

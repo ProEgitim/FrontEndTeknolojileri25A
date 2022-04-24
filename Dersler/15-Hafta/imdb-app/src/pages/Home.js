@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom"
-import { API } from "../components/getData"
+import Add from "../components/Add"
+import List from "../components/List"
+import { Slider } from "../components/slider"
 
 const Home = () => {
-    const vitrin = API.map((data, index) => { 
-        return (
-            <div id={index}>
-                <Link
-                to={{ pathname: `watch/${data}`, 
-                state: data }}>
-                    <img src={data.ilkResim} width={100} />
-                    <h5>{data.baslik}</h5>
-                </Link>
+    return (
+        <div className='container mt-3'>
+            <Slider />
+            <div className='col-12'>
+            Add Todo:
+            <Add />
             </div>
-        )
-    })
-
-    return vitrin
+            <div className='col-12 mt-3'>
+            Todo List:
+            <List />
+            </div>
+        </div>
+    )
 }
 
 export default Home

@@ -6,6 +6,7 @@ const todoReducer = (state = initialState, action) => {
 
     switch(action.type) {
         case todoActionTypes.TODO_ADD:
+            // newTodos Array 
             newTodos = [...state.todos, action.payload]
             return { todos: newTodos, filteredTodos: newTodos }
         case todoActionTypes.TODO_DELETE:
@@ -14,7 +15,14 @@ const todoReducer = (state = initialState, action) => {
             newTodos = state.todos.filter(todo => todo !== action.payload)
             return { todos: newTodos, filteredTodos: newTodos }
         case todoActionTypes.TODO_FILTER:
-            state.filteredTodos = state.todos.filter(todo => todo.includes(action.payload))
+            let stateTodos = state.todos.map(x=> { return x.toLowerCase() })
+            let lowerCase = action.payload.toLowerCase()
+
+            let a = stateTodos.filter(todo => todo.includes(lowerCase))
+            let b = state.todos.filter(todo => todo.includes(action.payload))
+
+            state.filteredTodos = JSON.stringify(a) == JSON.stringify(b.map(x=> {return x.toLowerCase()})) ? b : a
+            //state.todos.filter(todo => todo.includes(action.payload))
             return { todos: state.todos, filteredTodos: state.filteredTodos }
 
         default:
