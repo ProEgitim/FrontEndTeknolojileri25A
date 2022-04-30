@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 import combineStore from './redux/combineStore'
 
@@ -23,8 +24,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Navs />}>
               <Route path='' element={<Home />} />
-              <Route exact path='watch' element={<Watch />} />
-              <Route path='watch/:id' element={<Watchs />} />
+              <Route exact path='watch' element={<Watchs />} />
+              <Route path='watch/:id' element={<Watch />} />
               <Route path='contact' element={<Contact />} />
               <Route path='*' element={<NotFound />} />
             </Route>

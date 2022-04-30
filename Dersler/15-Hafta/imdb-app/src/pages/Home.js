@@ -1,11 +1,13 @@
 import Add from "../components/Add"
 import List from "../components/List"
+import { MovieRatings } from "../components/movieRatings"
 import { Slider } from "../components/slider"
 
-const Home = () => {
+const Home = props => {
     return (
         <div className='container mt-3'>
-            <Slider />
+            <Slider {...props} />
+            <MovieRatings {...props} />
             <div className='col-12'>
             Add Todo:
             <Add />
